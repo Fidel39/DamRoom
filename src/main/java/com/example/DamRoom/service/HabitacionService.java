@@ -8,7 +8,7 @@ import com.example.demo.domain.Habitacion;
 public interface HabitacionService {
 
     Optional<Habitacion> findBynumeroHabitacion(Long numeroHabitacion);
-    Set<Habitacion> findAll();
+    Set<Habitacion> findAllRooms();
     Habitacion addHabitacion(Habitacion habitacion);
     Habitacion modificarHabitacion(Long numeroHabitacion,Habitacion habitacion);
     void deleteHabitacion(Long numeroHabitacion);
