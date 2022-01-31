@@ -14,6 +14,7 @@ import java.util.List;
 import com.example.demo.domain.Habitacion;
 
 @Data
+@AllArgsConstructor
 @Entity(name ="reservas")
 public class Reservas {
 
