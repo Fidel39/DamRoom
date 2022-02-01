@@ -32,8 +32,8 @@ public class HabitacionController {
                     @Schema(implementation = Habitacion.class)))),
     })
 
-    @GetMapping(value = "/habitaciones/{NumeroHabitacion}}", produces = "application/json")
-    public ResponseEntity<Set<Habitacion>> getClientes(@PathVariable Long numeroHabitacion) {
+    @GetMapping(value = "/habitaciones/{idRoom}}", produces = "application/json")
+    public ResponseEntity<Set<Habitacion>> getRooms(@PathVariable Long idRoom) {
         Set<Habitacion> habitacions = null;
         habitacions = habitacionService.findAllRooms();
         return new ResponseEntity<>(habitacions, HttpStatus.OK);

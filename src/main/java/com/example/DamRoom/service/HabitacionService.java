@@ -7,10 +7,10 @@ import com.example.DamRoom.domain.Habitacion;
 
 public interface HabitacionService {
 
-    Optional<Habitacion> findBynumeroHabitacion(Long numeroHabitacion);
+    Optional<Habitacion> findByIdRoom(Long idRoom);
     Set<Habitacion> findAllRooms();
     Habitacion addHabitacion(Habitacion habitacion);
-    Habitacion modificarHabitacion(Long numeroHabitacion,Habitacion habitacion);
-    void deleteHabitacion(Long numeroHabitacion);
+    Habitacion modificarHabitacion(Long idRoom,Habitacion habitacion);
+    void deleteHabitacion(Long idRoom);
 
 }

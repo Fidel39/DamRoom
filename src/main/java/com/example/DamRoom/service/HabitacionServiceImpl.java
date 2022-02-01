@@ -19,8 +19,8 @@ public class HabitacionServiceImpl implements HabitacionService{
     private HabitacionRepository habitacionRepository;
 
     @Override
-    public Optional<Habitacion> findBynumeroHabitacion(Long numeroHabitacion) {
-        return habitacionRepository.findBynumeroHabitacion(numeroHabitacion);
+    public Optional<Habitacion> findByIdRoom(Long idRoom) {
+        return habitacionRepository.findByIdRoom(idRoom);
     }
 
     @Override
@@ -35,17 +35,17 @@ public class HabitacionServiceImpl implements HabitacionService{
 
 
     @Override
-    public Habitacion modificarHabitacion(Long numeroHabitacion, Habitacion habitacion) {
-        Habitacion habitacion1 = habitacionRepository.findBynumeroHabitacion(numeroHabitacion)
-                .orElseThrow(() -> new HabitacionNotFoundException(numeroHabitacion));
-        habitacion.setNumeroHabitacion(habitacion1.getNumeroHabitacion());
+    public Habitacion modificarHabitacion(Long idRoom, Habitacion habitacion) {
+        Habitacion habitacion1 = habitacionRepository.findByIdRoom(idRoom)
+                .orElseThrow(() -> new HabitacionNotFoundException(idRoom));
+        habitacion.setIdRoom(habitacion1.getIdRoom());
         return habitacionRepository.save(habitacion);
     }
 
     @Override
-    public void deleteHabitacion(Long numeroHabitacion) {
-        habitacionRepository.findBynumeroHabitacion(numeroHabitacion)
-                .orElseThrow(() -> new HabitacionNotFoundException(numeroHabitacion));
-        habitacionRepository.deleteById(numeroHabitacion);
+    public void deleteHabitacion(Long idRoom) {
+        habitacionRepository.findByIdRoom(idRoom)
+                .orElseThrow(() -> new HabitacionNotFoundException(idRoom));
+        habitacionRepository.deleteById(idRoom);
     }
 }

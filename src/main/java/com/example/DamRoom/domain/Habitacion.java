@@ -14,7 +14,7 @@ public class Habitacion {
     @Schema(description = "Identificador de la habitacion", example = "1",
             required = true)
     @Id
-    private long NumeroHabitacion;
+    private long idRoom;
 
     @Schema(description = "Tipo de la habitacion", example = "Presidencial",
             required = true)
@@ -34,8 +34,8 @@ public class Habitacion {
     @Column
     private Float ImporteNoche;
 
-    public Habitacion(long numeroHabitacion, String tipo, String caracteristicas, Float importeNoche, Reservas reserva) {
-        NumeroHabitacion = numeroHabitacion;
+    public Habitacion(long idRoom, String tipo, String caracteristicas, Float importeNoche, Reservas reserva) {
+        this.idRoom = idRoom;
         Tipo = tipo;
         Caracteristicas = caracteristicas;
         ImporteNoche = importeNoche;
@@ -45,12 +45,12 @@ public class Habitacion {
     @ManyToOne(fetch = FetchType.LAZY)
     private Reservas reserva;
 
-    public long getNumeroHabitacion() {
-        return NumeroHabitacion;
+    public long getIdRoom() {
+        return idRoom;
     }
 
-    public void setNumeroHabitacion(long numeroHabitacion) {
-        NumeroHabitacion = numeroHabitacion;
+    public void setIdRoom(long idRoom) {
+        this.idRoom = idRoom;
     }
 
     public String getTipo() {
@@ -80,7 +80,7 @@ public class Habitacion {
     @Override
     public String toString() {
         return "Habitacion{" +
-                "NumeroHabitacion=" + NumeroHabitacion +
+                "idRoom=" + idRoom +
                 ", Tipo='" + Tipo + '\'' +
                 ", Caracteristicas='" + Caracteristicas + '\'' +
                 ", ImporteNoche=" + ImporteNoche +
