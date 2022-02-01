@@ -19,7 +19,7 @@ public class ReservaServiceImpl implements ReservaService{
     private ReservaRepository reservaRepository;
 
     @Override
-    public Set<Reservas> findAll(){
+    public Set<Reservas> findAll() {
         return reservaRepository.findAll();
     }
 
@@ -54,13 +54,18 @@ public class ReservaServiceImpl implements ReservaService{
     }
 
     @Override
+    public Optional<Reservas> findAllReservas(int id){
+        return reservaRepository.findAllReservas(id);
+    }
+
+    @Override
     public Reservas addReserva(Reservas reservas){
         return reservaRepository.save(reservas);
     }
 
     @Override
     public Reservas modifyReserva(int id, Reservas newReserva){
-        Reservas reservas = reservaRepository.findById(id)
+        Reservas reservas = reservaRepository.findAllReservas(id)
                 .orElseThrow(() -> new ReservaNotFoundException(id));
         newReserva.setCodReserva(reservas.getCodReserva());
         return reservaRepository.save(newReserva);
@@ -69,8 +74,8 @@ public class ReservaServiceImpl implements ReservaService{
 
     @Override
     public void deleteReserva(int id){
-        reservaRepository.findById(id)
-                .orElseThrow(()-> new ReservaNotFoundException(id));
+        reservaRepository.findAllReservas(id)
+                .orElseThrow(() -> new ReservaNotFoundException(id));
         reservaRepository.deleteById(id);
     }
 

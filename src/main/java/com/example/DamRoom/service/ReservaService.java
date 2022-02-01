@@ -3,6 +3,7 @@ package com.example.DamRoom.service;
 import com.example.DamRoom.domain.Reservas;
 
 import java.util.Date;
+import java.util.Optional;
 import java.util.Set;
 
 public interface ReservaService {
@@ -14,6 +15,7 @@ public interface ReservaService {
     Set<Reservas> findByImporte(float importe);
     Set<Reservas> findByChekin (boolean chekin);
     Set<Reservas> findByChekout (boolean chekout);
+    Optional<Reservas> findAllReservas(int id);
     Reservas addReserva(Reservas reservas);
     Reservas modifyReserva(int id, Reservas newReserva);
     void deleteReserva(int id);
