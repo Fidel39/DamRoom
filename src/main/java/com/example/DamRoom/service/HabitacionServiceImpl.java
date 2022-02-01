@@ -1,7 +1,9 @@
 package com.example.DamRoom.service;
 
+
+import com.example.DamRoom.exception.HabitacionNotFoundException;
 import com.example.DamRoom.repository.HabitacionRepository;
-import com.example.demo.domain.Habitacion;
+import com.example.DamRoom.domain.Habitacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,26 +20,32 @@ public class HabitacionServiceImpl implements HabitacionService{
 
     @Override
     public Optional<Habitacion> findBynumeroHabitacion(Long numeroHabitacion) {
-        return Optional.empty();
+        return habitacionRepository.findBynumeroHabitacion(numeroHabitacion);
     }
 
     @Override
     public Set<Habitacion> findAllRooms() {
-        return null;
+        return habitacionRepository.findAllRooms();
     }
 
     @Override
     public Habitacion addHabitacion(Habitacion habitacion) {
-        return null;
+        return habitacionRepository.save(habitacion);
     }
+
 
     @Override
     public Habitacion modificarHabitacion(Long numeroHabitacion, Habitacion habitacion) {
-        return null;
+        Habitacion habitacion1 = habitacionRepository.findBynumeroHabitacion(numeroHabitacion)
+                .orElseThrow(() -> new HabitacionNotFoundException(numeroHabitacion));
+        habitacion.setNumeroHabitacion(habitacion1.getNumeroHabitacion());
+        return habitacionRepository.save(habitacion);
     }
 
     @Override
     public void deleteHabitacion(Long numeroHabitacion) {
-
+        habitacionRepository.findBynumeroHabitacion(numeroHabitacion)
+                .orElseThrow(() -> new HabitacionNotFoundException(numeroHabitacion));
+        habitacionRepository.deleteById(numeroHabitacion);
     }
 }

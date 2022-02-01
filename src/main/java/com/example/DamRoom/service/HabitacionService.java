@@ -3,7 +3,7 @@ package com.example.DamRoom.service;
 import java.util.Optional;
 import java.util.Set;
 
-import com.example.demo.domain.Habitacion;
+import com.example.DamRoom.domain.Habitacion;
 
 public interface HabitacionService {
 

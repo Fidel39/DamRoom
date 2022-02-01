@@ -13,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
@@ -24,7 +23,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @Operation(summary = "Obtiene el listado de vuelos y tambien conseguir un vuelo por su origen.")
+    @Operation(summary = "Obtiene el listado de los clientes.")
 
 
     @ApiResponses(value = {
@@ -34,7 +33,7 @@ public class ClienteController {
     })
 
     @GetMapping(value = "/clientes/{Dni}}", produces = "application/json")
-    public ResponseEntity<Set<Cliente>> getVuelos(@PathVariable String Dni) {
+    public ResponseEntity<Set<Cliente>> getClientes(@PathVariable String Dni) {
         Set<Cliente> clientes = null;
             clientes = clienteService.findAll();
         return new ResponseEntity<>(clientes, HttpStatus.OK);
