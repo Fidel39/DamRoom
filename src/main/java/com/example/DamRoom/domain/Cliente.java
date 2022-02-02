@@ -7,7 +7,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity(name = "clientes")
@@ -37,8 +39,11 @@ public class Cliente {
     @Column
     private int telefono;
 
-    /*@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Reservas> reservasList;*/
+    @ManyToMany(cascade = CascadeType.DETACH)
+    @JoinTable(name = "Reservas",
+    joinColumns = {@JoinColumn(name = "DNICliente")},
+    inverseJoinColumns = {@JoinColumn (name = "numHabitacion")})
+    private Set<Habitacion> habitacionList = new HashSet<Habitacion>();
 
     public Cliente(){
         dni = "";

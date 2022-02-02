@@ -5,6 +5,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.websocket.ClientEndpoint;
+import java.util.List;
 
 @Data
 @Entity(name = "habitaciones")
@@ -34,15 +36,15 @@ public class Habitacion {
     @Column
     private Float ImporteNoche;
 
-    public Habitacion( String tipo, String caracteristicas, Float importeNoche/*, Reservas reserva*/) {
+    public Habitacion( String tipo, String caracteristicas, Float importeNoche) {
         Tipo = tipo;
         Caracteristicas = caracteristicas;
         ImporteNoche = importeNoche;
-        //this.reserva = reserva;
+
     }
 
-    /*@ManyToOne(fetch = FetchType.LAZY)
-    private Reservas reserva;*/
+    @ManyToMany(mappedBy = "habitacionList", cascade = CascadeType.DETACH)
+    private List<Cliente> clienteList;
 
     public long getIdRoom() {
         return idRoom;

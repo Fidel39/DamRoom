@@ -15,14 +15,23 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-@Entity(name ="reservas")
+@Entity
 public class Reservas {
 
-    @Schema(description = "Identificador de la reserva", example = "1",
-            required = true)
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codReserva;
+
+    @EmbeddedId
+    private ReservasId id = new ReservasId();
+
+
+
+    @ManyToOne
+    @MapsId("DNICliente")
+    private Cliente cliente;
+
+
+    @ManyToOne
+    @MapsId("numHabitacion")
+    private Habitacion habitacion;
 
     @Schema(description = "Fecha de inicio de la reserva", example = "12/01/2022",
             required = true)
@@ -65,19 +74,12 @@ public class Reservas {
         this.cliente = cliente;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Cliente cliente;
+    /*@ManyToOne(fetch = FetchType.LAZY)
+    private Cliente cliente1;
 
     @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private List<Habitacion> habitaciones = new ArrayList<>();
+    private List<Habitacion> habitaciones = new ArrayList<>();*/
 
-    public int getCodReserva() {
-        return codReserva;
-    }
-
-    public void setCodReserva(int codReserva) {
-        this.codReserva = codReserva;
-    }
 
     public Date getFechaIni() {
         return fechaIni;
@@ -122,7 +124,6 @@ public class Reservas {
     @Override
     public String toString() {
         return "Reservas{" +
-                "codReserva=" + codReserva +
                 ", FechaIni=" + fechaIni +
                 ", FechaFin=" + fechaFin +
                 ", importe=" + importe +
