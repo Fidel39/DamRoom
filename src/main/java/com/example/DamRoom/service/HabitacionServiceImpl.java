@@ -24,8 +24,8 @@ public class HabitacionServiceImpl implements HabitacionService{
     }
 
     @Override
-    public Set<Habitacion> findAllRooms() {
-        return habitacionRepository.findAllRooms();
+    public Set<Habitacion> findAll() {
+        return habitacionRepository.findAll();
     }
 
     @Override

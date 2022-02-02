@@ -1,19 +1,16 @@
 package com.example.DamRoom.domain;
 
 
-import com.example.DamRoom.domain.Reservas;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@Entity(name = "cliente")
+@Entity(name = "clientes")
 public class Cliente {
 
     @Schema(description = "Identificador del cliente", example = "48986654L", required = true)
@@ -40,8 +37,8 @@ public class Cliente {
     @Column
     private int telefono;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Reservas> reservasList;
+    /*@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Reservas> reservasList;*/
 
     public Cliente(){
         dni = "";
@@ -107,7 +104,7 @@ public class Cliente {
                 ", apellido='" + apellido + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", telefono=" + telefono +
-                ", reservasList=" + reservasList +
+                //", reservasList=" + reservasList +
                 '}';
     }
 }

@@ -28,14 +28,14 @@ public class Reservas {
             required = true)
     @NotBlank
     @Column
-    private Date FechaIni;
+    private Date fechaIni;
 
 
     @Schema(description = "Fecha de finalizacion de la reserva", example = "12/01/2022",
             required = true)
     @NotBlank
     @Column
-    private Date FechaFin;
+    private Date fechaFin;
 
     @Schema(description = "Precio  de la reserva", example = "450€",
             required = true)
@@ -43,25 +43,25 @@ public class Reservas {
     @Column
     private Float importe;
 
-    @Schema(description = "Check In de la reserva", example = "12/01/2022",
+    @Schema(description = "CheckIn de la reserva", example = "12/01/2022",
             required = true)
     @NotBlank
     @Column
-    private Boolean CheckIn;
+    private Boolean checkIn;
 
-    @Schema(description = "Check Out de la reserva", example = "12/01/2022",
+    @Schema(description = "CheckOut de la reserva", example = "12/01/2022",
             required = true)
     @NotBlank
     @Column
-    private Boolean CheckOut;
+    private Boolean checkOut;
 
 
-    public Reservas(Date fechaIni, Date fechaFin, Float importe, Boolean checkIn, Boolean checkOut, Cliente cliente) {
-        FechaIni = fechaIni;
-        FechaFin = fechaFin;
+    public Reservas(Date FechaIni, Date FechaFin, Float importe, Boolean checkIn, Boolean checkOut, Cliente cliente) {
+        fechaIni = FechaIni;
+        fechaFin = FechaFin;
         this.importe = importe;
-        CheckIn = checkIn;
-        CheckOut = checkOut;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
         this.cliente = cliente;
     }
 
@@ -80,19 +80,19 @@ public class Reservas {
     }
 
     public Date getFechaIni() {
-        return FechaIni;
+        return fechaIni;
     }
 
-    public void setFechaIni(Date fechaIni) {
-        FechaIni = fechaIni;
+    public void setFechaIni(Date FechaIni) {
+        this.fechaIni = FechaIni;
     }
 
     public Date getFechaFin() {
-        return FechaFin;
+        return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
-        FechaFin = fechaFin;
+    public void setFechaFin(Date FechaFin) {
+        this.fechaFin = FechaFin;
     }
 
     public Float getImporte() {
@@ -104,30 +104,30 @@ public class Reservas {
     }
 
     public Boolean getCheckIn() {
-        return CheckIn;
+        return checkIn;
     }
 
     public void setCheckIn(Boolean checkIn) {
-        CheckIn = checkIn;
+        checkIn = checkIn;
     }
 
     public Boolean getCheckOut() {
-        return CheckOut;
+        return checkOut;
     }
 
     public void setCheckOut(Boolean checkOut) {
-        CheckOut = checkOut;
+        checkOut = checkOut;
     }
 
     @Override
     public String toString() {
         return "Reservas{" +
                 "codReserva=" + codReserva +
-                ", FechaIni=" + FechaIni +
-                ", FechaFin=" + FechaFin +
+                ", FechaIni=" + fechaIni +
+                ", FechaFin=" + fechaFin +
                 ", importe=" + importe +
-                ", CheckIn=" + CheckIn +
-                ", CheckOut=" + CheckOut +
+                ", CheckIn=" + checkIn +
+                ", CheckOut=" + checkOut +
                 ", cliente=" + cliente +
                 '}';
     }

@@ -10,6 +10,6 @@ import java.util.Set;
 public interface HabitacionRepository extends CrudRepository<Habitacion, Long> {
 
     Optional<Habitacion> findByIdRoom(Long idRoom);
-    Set<Habitacion> findAllRooms();
+    Set<Habitacion> findAll();
 
 }

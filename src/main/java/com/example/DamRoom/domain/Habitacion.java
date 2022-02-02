@@ -34,16 +34,15 @@ public class Habitacion {
     @Column
     private Float ImporteNoche;
 
-    public Habitacion(long idRoom, String tipo, String caracteristicas, Float importeNoche, Reservas reserva) {
-        this.idRoom = idRoom;
+    public Habitacion( String tipo, String caracteristicas, Float importeNoche/*, Reservas reserva*/) {
         Tipo = tipo;
         Caracteristicas = caracteristicas;
         ImporteNoche = importeNoche;
-        this.reserva = reserva;
+        //this.reserva = reserva;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Reservas reserva;
+    /*@ManyToOne(fetch = FetchType.LAZY)
+    private Reservas reserva;*/
 
     public long getIdRoom() {
         return idRoom;
@@ -84,7 +83,7 @@ public class Habitacion {
                 ", Tipo='" + Tipo + '\'' +
                 ", Caracteristicas='" + Caracteristicas + '\'' +
                 ", ImporteNoche=" + ImporteNoche +
-                ", reserva=" + reserva +
+                //", reserva=" + reserva +
                 '}';
     }
 }
