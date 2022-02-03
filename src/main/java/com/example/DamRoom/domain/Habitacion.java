@@ -13,28 +13,32 @@ import java.util.List;
 public class Habitacion {
 
 
-    @Schema(description = "Identificador de la habitacion", example = "1",
-            required = true)
+    @Schema(description = "Identificador de la habitacion", example = "1", required = true)
     @Id
     private long idRoom;
 
-    @Schema(description = "Tipo de la habitacion", example = "Presidencial",
-            required = true)
+    @Schema(description = "Tipo de la habitacion", example = "Presidencial", required = true)
+    @NotBlank
     @Column
     private String Tipo;
 
 
-    @Schema(description = "Caracteristicas de la habitacion", example = "Dos camas con una television  y un baño",
-            required = true)
+    @Schema(description = "Caracteristicas de la habitacion", example = "Dos camas con una television  y un baño", required = true)
+    @NotBlank
     @Column
     private String Caracteristicas;
 
 
-    @Schema(description = "Precio  de la habitacion", example = "450€",
-            required = true)
+    @Schema(description = "Precio  de la habitacion", example = "450€", required = true)
     @NotBlank
     @Column
     private Float ImporteNoche;
+
+    public Habitacion(){
+        Tipo = "";
+        Caracteristicas = "";
+        ImporteNoche = 0f;
+    }
 
     public Habitacion( String tipo, String caracteristicas, Float importeNoche) {
         Tipo = tipo;
