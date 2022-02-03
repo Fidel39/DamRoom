@@ -41,10 +41,23 @@ public class HabitacionController {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
     })
 
-    @PostMapping(value = "/damroom/habitaciones", produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Habitacion> addHabitacion(@RequestBody Habitacion habitacion) {
-        Habitacion addedHabitaciones = habitacionService.addHabitacion(habitacion);
-        return new ResponseEntity<>(addedHabitaciones, HttpStatus.OK);
+    @PostMapping(value = "/damroom/habitaciones" , produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Habitacion> addHabitacion(@RequestBody Habitacion habitacion){
+        Habitacion addedHabitacion = habitacionService.addHabitacion(habitacion);
+        return new ResponseEntity<>(addedHabitacion , HttpStatus.OK);
+
+    }
+
+    @Operation(summary = "Modificar una habitaciopn.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica una habitacion.",
+                    content = @Content(array = @ArraySchema(schema =
+                    @Schema(implementation = Habitacion.class)))),
+    })
+    @PutMapping("/habitaciones/{idRoom}")
+    public ResponseEntity<Habitacion> modificarHabitaciones(@PathVariable long idRoom, @RequestBody Habitacion newHabitacion) {
+        Habitacion habitacion= habitacionService.modificarHabitacion(idRoom, newHabitacion);
+        return new ResponseEntity<>(habitacion, HttpStatus.OK);
     }
 
     @Operation(summary = "Elimina una Habitacion")
