@@ -10,11 +10,13 @@ import java.util.List;
 
 @Data
 @Entity(name = "habitaciones")
+
 public class Habitacion {
 
 
     @Schema(description = "Identificador de la habitacion", example = "1", required = true)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idRoom;
 
     @Schema(description = "Tipo de la habitacion", example = "Presidencial", required = true)
@@ -40,10 +42,16 @@ public class Habitacion {
         ImporteNoche = 0f;
     }
 
-    public Habitacion( String tipo, String caracteristicas, Float importeNoche) {
-        Tipo = tipo;
-        Caracteristicas = caracteristicas;
-        ImporteNoche = importeNoche;
+    public Habitacion(Habitacion habitacion){
+        this.Tipo = habitacion.getTipo();
+        this.Caracteristicas = habitacion.getCaracteristicas();
+        this.ImporteNoche = habitacion.getImporteNoche();
+    }
+
+    public Habitacion(String tipo, String caracteristicas, Float importeNoche) {
+        this.Tipo = tipo;
+        this.Caracteristicas = caracteristicas;
+        this.ImporteNoche = importeNoche;
 
     }
 
