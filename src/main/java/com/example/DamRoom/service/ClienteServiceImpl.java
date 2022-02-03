@@ -37,7 +37,7 @@ public class ClienteServiceImpl implements ClienteService {
     public Cliente modificarCliente(String DNI, Cliente cliente){
         Cliente cliente1 = clienteRepository.findByDni(DNI)
                 .orElseThrow(() -> new ClienteNotFoundException(DNI));
-        cliente.setDni(cliente.getDni());
+        cliente.setDni(cliente1.getDni());
         return clienteRepository.save(cliente);
 
     }
