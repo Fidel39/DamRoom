@@ -14,14 +14,12 @@ import java.util.List;
 
 
 @Data
-@AllArgsConstructor
 @Entity
 public class Reservas {
 
 
     @EmbeddedId
-    private ReservasId id = new ReservasId();
-
+    private ReservasId id ;
 
 
     @ManyToOne
@@ -56,29 +54,32 @@ public class Reservas {
             required = true)
     @NotBlank
     @Column
-    private Boolean checkIn;
+    private boolean checkIn;
 
     @Schema(description = "CheckOut de la reserva", example = "12/01/2022",
             required = true)
     @NotBlank
     @Column
-    private Boolean checkOut;
+    private boolean checkOut;
 
+    public Reservas(){
+        fechaIni = null;
+        fechaFin = null;
+        this.importe = 0f;
+        this.checkIn = false;
+        this.checkOut = false;
+        this.id = null;
+    }
 
-    public Reservas(Date FechaIni, Date FechaFin, Float importe, Boolean checkIn, Boolean checkOut, Cliente cliente) {
-        fechaIni = FechaIni;
-        fechaFin = FechaFin;
+    public Reservas(ReservasId id,Date FechaIni, Date FechaFin, Float importe, boolean checkIn, boolean checkOut) {
+        this.id = id;
+        this.fechaIni = FechaIni;
+        this.fechaFin = FechaFin;
         this.importe = importe;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        this.cliente = cliente;
     }
 
-    /*@ManyToOne(fetch = FetchType.LAZY)
-    private Cliente cliente1;
-
-    @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private List<Habitacion> habitaciones = new ArrayList<>();*/
 
 
     public Date getFechaIni() {
@@ -105,20 +106,29 @@ public class Reservas {
         this.importe = importe;
     }
 
-    public Boolean getCheckIn() {
+    public boolean getCheckIn() {
         return checkIn;
     }
 
-    public void setCheckIn(Boolean checkIn) {
+    public void setCheckIn(boolean checkIn) {
         checkIn = checkIn;
     }
 
-    public Boolean getCheckOut() {
+    public boolean getCheckOut() {
         return checkOut;
     }
 
-    public void setCheckOut(Boolean checkOut) {
+    public void setCheckOut(boolean checkOut) {
         checkOut = checkOut;
+    }
+
+    public void setId(ReservasId id) {
+        this.id = id;
+    }
+
+    public void setId(String dni, long h) {
+
+        this.id = new ReservasId(dni,h);
     }
 
     @Override

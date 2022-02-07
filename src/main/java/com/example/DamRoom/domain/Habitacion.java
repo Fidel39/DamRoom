@@ -58,6 +58,7 @@ public class Habitacion {
     @ManyToMany(mappedBy = "habitacionList", cascade = CascadeType.DETACH)
     private List<Cliente> clienteList;
 
+
     public long getIdRoom() {
         return idRoom;
     }

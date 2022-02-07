@@ -45,6 +45,7 @@ public class Cliente {
     inverseJoinColumns = {@JoinColumn (name = "numHabitacion")})
     private Set<Habitacion> habitacionList = new HashSet<Habitacion>();
 
+
     public Cliente(){
         dni = "";
         nombre = "";

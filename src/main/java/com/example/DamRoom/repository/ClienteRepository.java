@@ -7,7 +7,6 @@ import java.util.Optional;
 import java.util.Set;
 
 public interface ClienteRepository extends CrudRepository<Cliente, String> {
-
     Optional<Cliente> findByDni(String DNI);
     Set<Cliente> findAll();
 }

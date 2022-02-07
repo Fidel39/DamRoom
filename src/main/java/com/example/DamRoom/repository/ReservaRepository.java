@@ -1,6 +1,7 @@
 package com.example.DamRoom.repository;
 
 import com.example.DamRoom.domain.Reservas;
+import com.example.DamRoom.domain.ReservasId;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,11 +13,11 @@ import java.util.Set;
 public interface ReservaRepository extends CrudRepository<Reservas, Integer> {
 
     Set<Reservas> findAll();
-    Optional<Reservas> findBycodReserva(int codReserva);
-    Set<Reservas> findByFechaIni(Date fechaIni);
-    Set<Reservas> findByFechaFin(Date fechaFin);
-    Set<Reservas> findByImporte(float importe);
-    Set<Reservas> findByCheckIn (boolean checkIn);
-    Set<Reservas> findByCheckOut (boolean checkOut);
+    Optional<Reservas> findReservaById(ReservasId id);
+    Set<Reservas> findReservaByfechaIni(Date fechaIni);
+    Set<Reservas> findReservaByfechaFin(Date fechaFin);
+    Set<Reservas> findReservaByimporte(float importe);
+    //Set<Reservas> findReservaBycheckIn (Byte checkIn);
+    Set<Reservas> findReservaBycheckOut (Byte checkOut);
 
 }

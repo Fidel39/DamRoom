@@ -1,8 +1,11 @@
 package com.example.DamRoom.domain;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class ReservasId implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String DNICliente;
     private Long numHabitacion;
@@ -12,7 +15,6 @@ public class ReservasId implements Serializable {
     }
 
     public ReservasId(String DNICliente, Long numHabitacion) {
-        super();
         this.DNICliente = DNICliente;
         this.numHabitacion = numHabitacion;
     }
@@ -32,4 +34,5 @@ public class ReservasId implements Serializable {
     public void setNumHabitacion(Long numHabitacion) {
         this.numHabitacion = numHabitacion;
     }
+
 }

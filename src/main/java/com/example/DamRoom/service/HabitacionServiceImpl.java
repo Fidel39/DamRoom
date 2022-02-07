@@ -23,6 +23,7 @@ public class HabitacionServiceImpl implements HabitacionService{
         return habitacionRepository.findByIdRoom(idRoom);
     }
 
+
     @Override
     public Set<Habitacion> findAll() {
         return habitacionRepository.findAll();
