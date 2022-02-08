@@ -69,7 +69,7 @@ public class ReservaServiceImpl implements ReservaService{
         newReserva.setIdReserva(reservas.getIdReserva());
         return reservaRepository.save(newReserva);
     }
-    
+
     @Override
     public void deleteReserva(long idReserva) {
         Reservas reservas = reservaRepository.findReservaByidReserva(idReserva)
