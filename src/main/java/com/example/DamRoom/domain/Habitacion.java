@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.websocket.ClientEndpoint;
 import java.util.List;
 
 @Data
@@ -16,7 +15,6 @@ public class Habitacion {
 
     @Schema(description = "Identificador de la habitacion", example = "1", required = true)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idRoom;
 
     @Schema(description = "Tipo de la habitacion", example = "Presidencial", required = true)
@@ -36,6 +34,14 @@ public class Habitacion {
     @Column
     private Float ImporteNoche;
 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_reserva")
+    private Reservas reserva;
+
+
+
+
     public Habitacion(){
         Tipo = "";
         Caracteristicas = "";
@@ -48,15 +54,15 @@ public class Habitacion {
         this.ImporteNoche = habitacion.getImporteNoche();
     }
 
-    public Habitacion(String tipo, String caracteristicas, Float importeNoche) {
+    public Habitacion(long id,String tipo, String caracteristicas, Float importeNoche) {
+        this.idRoom = id;
         this.Tipo = tipo;
         this.Caracteristicas = caracteristicas;
         this.ImporteNoche = importeNoche;
 
     }
 
-    @ManyToMany(mappedBy = "habitacionList", cascade = CascadeType.DETACH)
-    private List<Cliente> clienteList;
+
 
 
     public long getIdRoom() {

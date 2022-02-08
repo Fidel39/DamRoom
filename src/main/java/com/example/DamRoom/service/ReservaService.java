@@ -10,13 +10,13 @@ import java.util.Set;
 public interface ReservaService {
 
     Set<Reservas> findAll();
-    Optional<Reservas> findReservaById(ReservasId id);
+    Optional<Reservas> findReservaByidReserva(long idReserva);
     Set<Reservas> findReservaByfechaIni(Date fechaIni);
     Set<Reservas> findReservaByfechaFin(Date fechaFin);
     Set<Reservas> findReservaByimporte(float importe);
-    //Set<Reservas> findReservaBycheckIn (Byte checkIn);
-    Set<Reservas> findReservaBycheckOut (Byte checkOut);
+    Set<Reservas> findReservasByestado(String estado);
     Reservas addReserva(Reservas reservas);
-    Reservas modifyReserva(ReservasId id, Reservas newReserva);
-    //void deleteReserva(ReservasId id);
+    Reservas modifyReserva(long idReserva, Reservas newReserva);
+    Reservas checkReserva(String check,long idReserva);
+    void deleteReserva(long id);
 }

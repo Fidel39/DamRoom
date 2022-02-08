@@ -46,19 +46,14 @@ public class ReservaServiceImpl implements ReservaService{
         return reservaRepository.findReservaByimporte(importe);
     }
 
-   /*@Override
-    public Set<Reservas> findReservaBycheckIn(Byte checkIn){
-        return reservaRepository.findReservaBycheckIn(checkIn);
-    }*/
-
     @Override
-    public Set<Reservas> findReservaBycheckOut(Byte checkOut){
-        return reservaRepository.findReservaBycheckOut(checkOut);
+    public Set<Reservas> findReservasByestado(String estado) {
+        return reservaRepository.findReservaByestado(estado);
     }
 
     @Override
-    public Optional<Reservas> findReservaById(ReservasId id){
-        return reservaRepository.findReservaById(id);
+    public Optional<Reservas> findReservaByidReserva(long idReserva){
+        return reservaRepository.findReservaByidReserva(idReserva);
     }
 
     @Override
@@ -68,19 +63,31 @@ public class ReservaServiceImpl implements ReservaService{
     }
 
     @Override
-    public Reservas modifyReserva(ReservasId id, Reservas newReserva){
-        Reservas reservas = reservaRepository.findReservaById(id)
-                .orElseThrow(() -> new ReservaNotFoundException(id.getDNICliente()));
-        newReserva.setId(reservas.getId());
+    public Reservas modifyReserva(long idReserva, Reservas newReserva){
+        Reservas reservas = reservaRepository.findReservaByidReserva(idReserva)
+                .orElseThrow(() -> new ReservaNotFoundException(idReserva));
+        newReserva.setIdReserva(reservas.getIdReserva());
         return reservaRepository.save(newReserva);
     }
+    
+    @Override
+    public void deleteReserva(long idReserva) {
+        Reservas reservas = reservaRepository.findReservaByidReserva(idReserva)
+                .orElseThrow(() -> new ReservaNotFoundException(idReserva));
+        reservaRepository.delete(reservas);
+    }
 
-/*    @Override
-    public void deleteReserva(ReservasId id) {
-        Reservas reservas = reservaRepository.findReservaById(id)
-                .orElseThrow(() -> new ReservaNotFoundException(id.getDNICliente()));
-        reservaRepository.delete(id);
-    }*/
+    @Override
+    public Reservas checkReserva(String check,long idReserva) {
+        Reservas reservas = reservaRepository.findReservaByidReserva(idReserva)
+                .orElseThrow(() -> new ReservaNotFoundException(idReserva));
 
-
+        if(reservas.getEstado().equals("Pendiente")&&check.equals("CheckIn")){
+            reservas.setEstado("En Activo");
+        }else if(reservas.getEstado().equals("En Activo")&&check.equals("CheckOut")){
+            reservas.setEstado("Finalizado");
+        }
+        Long id = reservas.getIdReserva();
+        return reservas;
+    }
 }

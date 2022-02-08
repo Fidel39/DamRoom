@@ -1,38 +1,39 @@
 package com.example.DamRoom.domain;
 
+import javax.persistence.Embeddable;
 import java.io.Serializable;
-import java.util.Objects;
 
+
+@Embeddable
 public class ReservasId implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String DNICliente;
-    private Long numHabitacion;
+    private String dni;
+    private Long idRoom;
 
     public ReservasId() {
 
     }
 
-    public ReservasId(String DNICliente, Long numHabitacion) {
-        this.DNICliente = DNICliente;
-        this.numHabitacion = numHabitacion;
+    public ReservasId(String dni , Long numHabitacion) {
+        this.dni  = dni ;
+        this.idRoom = numHabitacion;
     }
 
-    public String getDNICliente() {
-        return DNICliente;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
-    public void setDNICliente(String DNICliente) {
-        this.DNICliente = DNICliente;
+    public void setIdRoom(Long idRoom) {
+        this.idRoom = idRoom;
     }
 
-    public Long getNumHabitacion() {
-        return numHabitacion;
+    public String getDni() {
+        return dni;
     }
 
-    public void setNumHabitacion(Long numHabitacion) {
-        this.numHabitacion = numHabitacion;
+    public Long getIdRoom() {
+        return idRoom;
     }
-
 }

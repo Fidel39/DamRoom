@@ -10,14 +10,13 @@ import java.util.Optional;
 import java.util.Set;
 
 @Repository
-public interface ReservaRepository extends CrudRepository<Reservas, Integer> {
+public interface ReservaRepository extends CrudRepository<Reservas, Long> {
 
     Set<Reservas> findAll();
-    Optional<Reservas> findReservaById(ReservasId id);
+    Optional<Reservas> findReservaByidReserva(long idReserva);
     Set<Reservas> findReservaByfechaIni(Date fechaIni);
     Set<Reservas> findReservaByfechaFin(Date fechaFin);
     Set<Reservas> findReservaByimporte(float importe);
-    //Set<Reservas> findReservaBycheckIn (Byte checkIn);
-    Set<Reservas> findReservaBycheckOut (Byte checkOut);
+    Set<Reservas> findReservaByestado(String estado);
 
 }

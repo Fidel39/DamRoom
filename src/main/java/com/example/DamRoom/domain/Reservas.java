@@ -2,10 +2,7 @@ package com.example.DamRoom.domain;
 
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.sql.Date;
@@ -17,19 +14,12 @@ import java.util.List;
 @Entity
 public class Reservas {
 
-
-    @EmbeddedId
-    private ReservasId id ;
-
-
-    @ManyToOne
-    @MapsId("DNICliente")
-    private Cliente cliente;
+    @Schema(description = "Identificador de la habitacion", example = "1", required = true)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idReserva;
 
 
-    @ManyToOne
-    @MapsId("numHabitacion")
-    private Habitacion habitacion;
 
     @Schema(description = "Fecha de inicio de la reserva", example = "12/01/2022",
             required = true)
@@ -50,36 +40,44 @@ public class Reservas {
     @Column
     private Float importe;
 
-    @Schema(description = "CheckIn de la reserva", example = "12/01/2022",
-            required = true)
+    @Schema(description = "Estado de la reserva", example = "Libre,Reservado,Pendiente", required = true)
     @NotBlank
     @Column
-    private boolean checkIn;
+    private String estado;
 
-    @Schema(description = "CheckOut de la reserva", example = "12/01/2022",
-            required = true)
-    @NotBlank
-    @Column
-    private boolean checkOut;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cliente cliente;
+
+    @OneToMany(mappedBy = "reserva", fetch = FetchType.LAZY)
+    private List<Habitacion> habitacionList = new ArrayList<>();
+
 
     public Reservas(){
         fechaIni = null;
         fechaFin = null;
         this.importe = 0f;
-        this.checkIn = false;
-        this.checkOut = false;
-        this.id = null;
     }
 
-    public Reservas(ReservasId id,Date FechaIni, Date FechaFin, Float importe, boolean checkIn, boolean checkOut) {
-        this.id = id;
+    public Reservas(Date FechaIni, Date FechaFin, Float importe, String estado,Cliente cliente,Habitacion habitacion) {
         this.fechaIni = FechaIni;
         this.fechaFin = FechaFin;
         this.importe = importe;
-        this.checkIn = checkIn;
-        this.checkOut = checkOut;
+        this.estado = estado;
+        this.habitacionList.add(habitacion);
+        this.cliente = cliente;
     }
 
+
+    public Reservas(Reservas reservas) {
+        this.fechaIni = reservas.getFechaIni();
+        this.fechaFin = reservas.getFechaFin();
+        this.importe = reservas.getImporte();
+        this.estado = reservas.getEstado();
+        this.habitacionList=reservas.getHabitacionList();
+        this.cliente = reservas.getCliente();
+    }
 
 
     public Date getFechaIni() {
@@ -106,29 +104,36 @@ public class Reservas {
         this.importe = importe;
     }
 
-    public boolean getCheckIn() {
-        return checkIn;
+    public Long getIdReserva() {
+        return idReserva;
     }
 
-    public void setCheckIn(boolean checkIn) {
-        checkIn = checkIn;
+    public void setIdReserva(Long idReserva) {
+        this.idReserva = idReserva;
     }
 
-    public boolean getCheckOut() {
-        return checkOut;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setCheckOut(boolean checkOut) {
-        checkOut = checkOut;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public void setId(ReservasId id) {
-        this.id = id;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setId(String dni, long h) {
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-        this.id = new ReservasId(dni,h);
+    public List<Habitacion> getHabitacionList() {
+        return habitacionList;
+    }
+
+    public void setHabitacionList(List<Habitacion> habitacionList) {
+        this.habitacionList = habitacionList;
     }
 
     @Override
@@ -137,9 +142,6 @@ public class Reservas {
                 ", FechaIni=" + fechaIni +
                 ", FechaFin=" + fechaFin +
                 ", importe=" + importe +
-                ", CheckIn=" + checkIn +
-                ", CheckOut=" + checkOut +
-                ", cliente=" + cliente +
                 '}';
     }
 }

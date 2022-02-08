@@ -2,11 +2,10 @@ package com.example.DamRoom.domain;
 
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -39,15 +38,11 @@ public class Cliente {
     @Column
     private int telefono;
 
-    @ManyToMany(cascade = CascadeType.DETACH)
-    @JoinTable(name = "Reservas",
-    joinColumns = {@JoinColumn(name = "DNICliente")},
-    inverseJoinColumns = {@JoinColumn (name = "numHabitacion")})
-    private Set<Habitacion> habitacionList = new HashSet<Habitacion>();
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Reservas> reservaList = new ArrayList<>();
 
 
     public Cliente(){
-        dni = "";
         nombre = "";
         apellido = "";
         direccion = "";
