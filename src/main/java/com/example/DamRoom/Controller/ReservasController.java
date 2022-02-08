@@ -1,12 +1,8 @@
 package com.example.DamRoom.Controller;
 
 
-import com.example.DamRoom.domain.Cliente;
 import com.example.DamRoom.domain.Habitacion;
 import com.example.DamRoom.domain.Reservas;
-import com.example.DamRoom.domain.ReservasId;
-import com.example.DamRoom.exception.ClienteNotFoundException;
-import com.example.DamRoom.exception.HabitacionNotFoundException;
 import com.example.DamRoom.service.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -14,7 +10,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +19,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
-import java.util.OptionalInt;
 import java.util.Set;
 
 @RestController
@@ -142,7 +136,7 @@ public class ReservasController {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
     })
 
-    @PostMapping(value = "/damroom/reservas/" , produces = "application/json", consumes = "application/json")
+    @PostMapping(value = "/damroom/reservas" , produces = "application/json", consumes = "application/json")
     public ResponseEntity<Reservas> addReserva(@RequestBody Reservas reserva){
         Reservas addedReserva = reservaService.addReserva(reserva);
         return new ResponseEntity<>(addedReserva , HttpStatus.OK);

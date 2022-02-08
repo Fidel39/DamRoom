@@ -1,7 +1,6 @@
 package com.example.DamRoom.repository;
 
 import com.example.DamRoom.domain.Reservas;
-import com.example.DamRoom.domain.ReservasId;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

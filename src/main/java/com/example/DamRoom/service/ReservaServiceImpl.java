@@ -1,9 +1,6 @@
 package com.example.DamRoom.service;
 
-import com.example.DamRoom.domain.Cliente;
-import com.example.DamRoom.domain.Habitacion;
 import com.example.DamRoom.domain.Reservas;
-import com.example.DamRoom.domain.ReservasId;
 import com.example.DamRoom.exception.ReservaNotFoundException;
 import com.example.DamRoom.repository.ClienteRepository;
 import com.example.DamRoom.repository.HabitacionRepository;

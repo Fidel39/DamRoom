@@ -12,6 +12,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "reservas")
 public class Reservas {
 
     @Schema(description = "Identificador de la habitacion", example = "1", required = true)
@@ -47,10 +48,10 @@ public class Reservas {
 
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+   @ManyToOne(fetch=FetchType.LAZY)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "reserva", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
     private List<Habitacion> habitacionList = new ArrayList<>();
 
 
@@ -60,12 +61,12 @@ public class Reservas {
         this.importe = 0f;
     }
 
-    public Reservas(Date FechaIni, Date FechaFin, Float importe, String estado,Cliente cliente,Habitacion habitacion) {
+    public Reservas(Date FechaIni, Date FechaFin, Float importe, String estado,Cliente cliente/*Habitacion habitacion*/) {
         this.fechaIni = FechaIni;
         this.fechaFin = FechaFin;
         this.importe = importe;
         this.estado = estado;
-        this.habitacionList.add(habitacion);
+        //this.habitacionList.add(habitacion);
         this.cliente = cliente;
     }
 
@@ -75,8 +76,8 @@ public class Reservas {
         this.fechaFin = reservas.getFechaFin();
         this.importe = reservas.getImporte();
         this.estado = reservas.getEstado();
-        this.habitacionList=reservas.getHabitacionList();
-        this.cliente = reservas.getCliente();
+        //this.habitacionList=reservas.getHabitacionList();
+       this.cliente = reservas.getCliente();
     }
 
 
@@ -135,6 +136,7 @@ public class Reservas {
     public void setHabitacionList(List<Habitacion> habitacionList) {
         this.habitacionList = habitacionList;
     }
+
 
     @Override
     public String toString() {

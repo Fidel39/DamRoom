@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Set;
 
 @Data
-@Entity(name = "clientes")
+@Entity
+@Table(name = "clientes")
 public class Cliente {
 
     @Schema(description = "Identificador del cliente", example = "48986654L", required = true)
@@ -39,7 +40,7 @@ public class Cliente {
     private int telefono;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Reservas> reservaList = new ArrayList<>();
+    private List<Reservas> reservaList= new ArrayList<>();
 
 
     public Cliente(){

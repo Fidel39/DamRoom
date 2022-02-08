@@ -8,13 +8,15 @@ import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Data
-@Entity(name = "habitaciones")
+@Entity
+@Table(name = "habitaciones")
 
 public class Habitacion {
 
 
     @Schema(description = "Identificador de la habitacion", example = "1", required = true)
     @Id
+    @GeneratedValue
     private long idRoom;
 
     @Schema(description = "Tipo de la habitacion", example = "Presidencial", required = true)
@@ -35,7 +37,7 @@ public class Habitacion {
     private Float ImporteNoche;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "id_reserva")
     private Reservas reserva;
 
@@ -54,8 +56,7 @@ public class Habitacion {
         this.ImporteNoche = habitacion.getImporteNoche();
     }
 
-    public Habitacion(long id,String tipo, String caracteristicas, Float importeNoche) {
-        this.idRoom = id;
+    public Habitacion(String tipo, String caracteristicas, Float importeNoche) {
         this.Tipo = tipo;
         this.Caracteristicas = caracteristicas;
         this.ImporteNoche = importeNoche;
