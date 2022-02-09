@@ -1,6 +1,9 @@
 package com.example.DamRoom.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
@@ -16,7 +19,7 @@ public class Habitacion {
 
     @Schema(description = "Identificador de la habitacion", example = "1", required = true)
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idRoom;
 
     @Schema(description = "Tipo de la habitacion", example = "Presidencial", required = true)
@@ -37,8 +40,7 @@ public class Habitacion {
     private Float ImporteNoche;
 
 
-    @ManyToOne()
-    @JoinColumn(name = "id_reserva")
+    @OneToOne(mappedBy = "habitacion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Reservas reserva;
 
 

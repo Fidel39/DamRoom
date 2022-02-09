@@ -46,8 +46,8 @@ public class ClienteController {
     })
 
 
-    @GetMapping(value = "/clientes/dni", produces = "application/json")
-    public ResponseEntity<Optional<Cliente>> getClientesByDNI(@RequestParam(value = "dni", defaultValue = "") String dni) {
+    @GetMapping(value = "/clientes/{dni}", produces = "application/json")
+    public ResponseEntity<Optional<Cliente>> getClientesByDNI(@PathVariable  String dni) {
         Optional<Cliente> clientes = null;
         clientes = clienteService.findByDni(dni);
 

@@ -1,6 +1,9 @@
 package com.example.DamRoom.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
@@ -39,8 +42,9 @@ public class Cliente {
     @Column
     private int telefono;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Reservas> reservaList= new ArrayList<>();
+    @OneToMany(mappedBy = "cliente", targetEntity = Reservas.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
+    private List<Reservas> reservaList;
 
 
     public Cliente(){

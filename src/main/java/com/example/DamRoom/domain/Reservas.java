@@ -1,6 +1,10 @@
 package com.example.DamRoom.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
@@ -8,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 
 @Data
@@ -47,26 +52,29 @@ public class Reservas {
     private String estado;
 
 
-
-   @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne
+        @JoinColumn(name = "DNI-Cliente",nullable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private List<Habitacion> habitacionList = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Habitacion")
+    private Habitacion habitacion;
 
 
     public Reservas(){
         fechaIni = null;
         fechaFin = null;
         this.importe = 0f;
+        this.estado = "En Pendiente";
     }
 
-    public Reservas(Date FechaIni, Date FechaFin, Float importe, String estado,Cliente cliente/*Habitacion habitacion*/) {
+    public Reservas(String estado,Date FechaIni, Date FechaFin, Float importe, Cliente cliente,Habitacion habitacion) {
         this.fechaIni = FechaIni;
         this.fechaFin = FechaFin;
         this.importe = importe;
         this.estado = estado;
-        //this.habitacionList.add(habitacion);
+        this.habitacion=habitacion;
         this.cliente = cliente;
     }
 
@@ -75,8 +83,8 @@ public class Reservas {
         this.fechaIni = reservas.getFechaIni();
         this.fechaFin = reservas.getFechaFin();
         this.importe = reservas.getImporte();
-        this.estado = reservas.getEstado();
-        //this.habitacionList=reservas.getHabitacionList();
+        this.estado = "En Pendiente";
+        this.habitacion= reservas.getHabitacion();
        this.cliente = reservas.getCliente();
     }
 
@@ -129,13 +137,6 @@ public class Reservas {
         this.cliente = cliente;
     }
 
-    public List<Habitacion> getHabitacionList() {
-        return habitacionList;
-    }
-
-    public void setHabitacionList(List<Habitacion> habitacionList) {
-        this.habitacionList = habitacionList;
-    }
 
 
     @Override
