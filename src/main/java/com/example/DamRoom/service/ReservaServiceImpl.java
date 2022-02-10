@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.Optional;
 
@@ -19,8 +20,6 @@ public class ReservaServiceImpl implements ReservaService{
 
     @Autowired
     private ReservaRepository reservaRepository;
-    private ClienteRepository clienteRepository;
-    private HabitacionRepository habitacionRepository;
 
     @Override
     public Set<Reservas> findAll() {
@@ -51,6 +50,20 @@ public class ReservaServiceImpl implements ReservaService{
     @Override
     public Optional<Reservas> findReservaByidReserva(long idReserva){
         return reservaRepository.findReservaByidReserva(idReserva);
+    }
+
+    @Override
+    public Set<Reservas> findReservaBydniCliente(String dniCliente) {
+        Set<Reservas> reservas = reservaRepository.findAll();
+        Set<Reservas> reservasFinal = new HashSet<>();
+
+        for(Reservas re1 : reservas){
+            if(re1.getCliente().getDni().equals(dniCliente)){
+                reservasFinal.add(re1);
+            }
+        }
+
+        return reservasFinal;
     }
 
 

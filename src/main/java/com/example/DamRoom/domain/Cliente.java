@@ -4,6 +4,7 @@ package com.example.DamRoom.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
@@ -16,6 +17,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "clientes")
+@JsonIgnoreProperties(value = {"reserva"}, allowSetters  = true)
 public class Cliente {
 
     @Schema(description = "Identificador del cliente", example = "48986654L", required = true)
@@ -43,8 +45,8 @@ public class Cliente {
     private int telefono;
 
     @OneToMany(mappedBy = "cliente", targetEntity = Reservas.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonIgnore
-    private List<Reservas> reservaList;
+    @JsonProperty("reserva")
+    private List<Reservas> reservaList = new ArrayList<>();
 
 
     public Cliente(){

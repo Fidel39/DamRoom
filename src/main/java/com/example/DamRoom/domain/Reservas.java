@@ -1,10 +1,7 @@
 package com.example.DamRoom.domain;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
@@ -15,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 
-@Data
 @Entity
 @Table(name = "reservas")
 public class Reservas {
@@ -51,9 +47,12 @@ public class Reservas {
     @Column
     private String estado;
 
+    @Schema(description = "DNI del cliente de la reserva", example = "4956321C", required = true)
+    @NotBlank
+    @Column
+    private String dniCliente;
 
     @ManyToOne
-        @JoinColumn(name = "DNI-Cliente",nullable = false)
     private Cliente cliente;
 
 
@@ -67,26 +66,29 @@ public class Reservas {
         fechaFin = null;
         this.importe = 0f;
         this.estado = "En Pendiente";
+        this.dniCliente="";
     }
 
-    public Reservas(String estado,Date FechaIni, Date FechaFin, Float importe, Cliente cliente,Habitacion habitacion) {
+    public Reservas(String estado,Date FechaIni, Date FechaFin, Float importe, Cliente cliente,Habitacion habitacion,String dniCliente) {
         this.fechaIni = FechaIni;
         this.fechaFin = FechaFin;
         this.importe = importe;
         this.estado = estado;
         this.habitacion=habitacion;
         this.cliente = cliente;
+        this.dniCliente = dniCliente;
     }
 
 
-    public Reservas(Reservas reservas) {
+   /* public Reservas(Reservas reservas) {
         this.fechaIni = reservas.getFechaIni();
         this.fechaFin = reservas.getFechaFin();
         this.importe = reservas.getImporte();
         this.estado = "En Pendiente";
-        this.habitacion= reservas.getHabitacion();
+        this.habitacion= null;
        this.cliente = reservas.getCliente();
-    }
+       this.dniCliente=reservas.getCliente().getDni();
+    }*/
 
 
     public Date getFechaIni() {

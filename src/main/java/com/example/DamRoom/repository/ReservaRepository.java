@@ -13,6 +13,7 @@ public interface ReservaRepository extends CrudRepository<Reservas, Long> {
 
     Set<Reservas> findAll();
     Optional<Reservas> findReservaByidReserva(long idReserva);
+    Set<Reservas> findReservaBydniCliente(String dniCliente);
     Set<Reservas> findReservaByfechaIni(Date fechaIni);
     Set<Reservas> findReservaByfechaFin(Date fechaFin);
     Set<Reservas> findReservaByimporte(float importe);

@@ -131,6 +131,15 @@ public class ReservasController {
         return new ResponseEntity<>(reservas, HttpStatus.OK);
     }
 
+
+    @GetMapping("/damroom/reservas/{dniCliente}")
+    public ResponseEntity<Set<Reservas>> getReservasByDniCliente(@PathVariable String dniCliente) {
+        Set<Reservas> reservas = null;
+        reservas = reservaService.findReservaBydniCliente(dniCliente);
+        return new ResponseEntity<>(reservas, HttpStatus.OK);
+    }
+
+
     @Operation(summary = "Registrar una nueva reserva.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
@@ -181,6 +190,8 @@ public class ReservasController {
         return new ResponseEntity<>(modifyReserva , HttpStatus.OK);
 
     }
+
+
 
 
 }
