@@ -78,8 +78,8 @@ public class ClienteController {
     })
 
 
-    @PutMapping("/clientes/dni")
-    public ResponseEntity<Cliente> modificarCliente(@RequestParam( value = "dni", defaultValue = "")String dni, @RequestBody Cliente newCliente) {
+    @PutMapping("/clientes/{dni}")
+    public ResponseEntity<Cliente> modificarCliente(@PathVariable  String dni, @RequestBody Cliente newCliente) {
         Cliente cliente= clienteService.modificarCliente(dni, newCliente);
         return new ResponseEntity<>(cliente, HttpStatus.OK);
     }
@@ -93,8 +93,8 @@ public class ClienteController {
     })
 
 
-    @DeleteMapping("/clientes/dni")
-    public ResponseEntity<Response> deleteCliente(@RequestParam( value = "dni", defaultValue = "")String dni) {
+    @DeleteMapping("/clientes/{dni}")
+    public ResponseEntity<Response> deleteCliente(@PathVariable  String dni) {
         clienteService.deleteCliente(dni);
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }

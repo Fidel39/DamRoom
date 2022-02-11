@@ -4,16 +4,17 @@ package com.example.DamRoom.domain;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
-@Data
+
 @Entity
 @Table(name = "habitaciones")
-
+@JsonIgnoreProperties(value = {"reserva"}, allowSetters  = true)
 public class Habitacion {
 
 
@@ -41,7 +42,8 @@ public class Habitacion {
 
 
     @OneToOne(mappedBy = "habitacion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Reservas reserva;
+    @JsonProperty("reserva")
+    private Reservas reserva ;
 
 
 
