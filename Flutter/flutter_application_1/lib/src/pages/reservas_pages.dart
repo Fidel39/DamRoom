@@ -9,7 +9,6 @@ class HomeReservas extends StatelessWidget{
       appBar: AppBar(
         centerTitle: true,
         title: Text('Reservas'),
-        backgroundColor: Colors.cyanAccent,
       ),
     );
   }

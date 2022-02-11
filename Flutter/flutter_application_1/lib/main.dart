@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'src/pages/calendario.dart';
 import 'src/pages/reservas_pages.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
         title: 'Damhotel',
         initialRoute: '/',
         routes: {
-          '/': (BuildContext context) => HomeReservas(),
+          '/': (BuildContext context) => Calendario(),
           //'detalle': (BuildContext context) => PeliculaDetalle(),
           //'actores_detalle': (BuildContext context) => ActoresDetalle()
         });
