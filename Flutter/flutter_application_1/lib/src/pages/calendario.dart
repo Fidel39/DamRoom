@@ -11,7 +11,7 @@ class Calendario extends StatelessWidget{
         title: Text("Todas las reservas"),
       ),
       body: SfCalendar(
-        view: CalendarView.week,
+        view: CalendarView.month,
         dataSource: MeetingDateSource(getAppointment()),
       ),
     );
