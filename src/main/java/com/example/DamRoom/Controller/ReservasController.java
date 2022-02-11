@@ -55,10 +55,10 @@ public class ReservasController {
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
     })
 
-    @GetMapping("/reservas/idReserva")
-    public ResponseEntity<Optional<Reservas>> getReservaById(@RequestParam(value = "idReserva", defaultValue = "")long idReserva) {
+    @GetMapping("/reservas/idReserva/{id}")
+    public ResponseEntity<Optional<Reservas>> getReservaById(@PathVariable long id) {
         Optional<Reservas> reservas = null;
-        reservas = reservaService.findReservaByidReserva(idReserva);
+        reservas = reservaService.findReservaByidReserva(id);
         return new ResponseEntity<>(reservas, HttpStatus.OK);
     }
 
@@ -90,8 +90,8 @@ public class ReservasController {
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
     })
 
-    @GetMapping("/reservas/fechaFin")
-    public ResponseEntity<Set<Reservas>> getReservaByFechaFin(@RequestParam(value = "fechaFin", defaultValue = "")String fechaFin) {
+    @GetMapping("/reservas/fechaFinal")
+    public ResponseEntity<Set<Reservas>> getReservaByFechaFin(@RequestParam(value = "fechaFinal", defaultValue = "")String fechaFin) {
         Set<Reservas> reservas = null;
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -118,7 +118,7 @@ public class ReservasController {
         return new ResponseEntity<>(reservas, HttpStatus.OK);
     }
 
-    @Operation(summary = "Obtiene una reserva por el importe.")
+        @Operation(summary = "Obtiene una reserva por el importe.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado de reservas",
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
@@ -158,8 +158,8 @@ public class ReservasController {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
     })
 
-    @PutMapping(value = "/reservas/idReserva" , produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Reservas> modifyReserva(@RequestParam(value = "idReserva", defaultValue = "")long idReserva,@RequestBody Reservas reserva){
+    @PutMapping(value = "/reservas/{idReserva}" , produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Reservas> modifyReserva(@PathVariable long idReserva,@RequestBody Reservas reserva){
         Reservas modifyReserva = reservaService.modifyReserva(idReserva,reserva);
         return new ResponseEntity<>(modifyReserva , HttpStatus.OK);
 
@@ -172,8 +172,8 @@ public class ReservasController {
 
 
 
-    @DeleteMapping("/reservas/id")
-    public ResponseEntity<Response> deleteReserva(@RequestParam(value = "idReserva", defaultValue = "") long idReserva) {
+    @DeleteMapping("/reservas/{idReserva}")
+    public ResponseEntity<Response> deleteReserva(@PathVariable long idReserva) {
         reservaService.deleteReserva(idReserva);
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }
@@ -184,9 +184,9 @@ public class ReservasController {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
     })
 
-    @PutMapping(value = "/reservas/checkIn&idReserva" , produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Reservas> checkReserva(@RequestParam(value = "checkIn", defaultValue = "")String checkIn,@RequestParam(value = "id",defaultValue = "")long id){
-        Reservas modifyReserva = reservaService.checkReserva(checkIn,id);
+    @PutMapping(value = "/reservas/checkIn" , produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Reservas> checkReserva(@RequestParam(value = "checkIn", defaultValue = "")String checkIn,@RequestBody Reservas reserva){
+        Reservas modifyReserva = reservaService.checkReserva(checkIn,reserva);
         return new ResponseEntity<>(modifyReserva , HttpStatus.OK);
 
     }

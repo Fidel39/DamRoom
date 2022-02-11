@@ -80,15 +80,15 @@ public class Reservas {
     }
 
 
-   /* public Reservas(Reservas reservas) {
+   public Reservas(Reservas reservas) {
         this.fechaIni = reservas.getFechaIni();
         this.fechaFin = reservas.getFechaFin();
         this.importe = reservas.getImporte();
         this.estado = "En Pendiente";
-        this.habitacion= null;
+        this.habitacion= reservas.getHabitacion();
        this.cliente = reservas.getCliente();
        this.dniCliente=reservas.getCliente().getDni();
-    }*/
+    }
 
 
     public Date getFechaIni() {
@@ -139,7 +139,21 @@ public class Reservas {
         this.cliente = cliente;
     }
 
+    public String getDniCliente() {
+        return dniCliente;
+    }
 
+    public void setDniCliente(String dniCliente) {
+        this.dniCliente = dniCliente;
+    }
+
+    public Habitacion getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(Habitacion habitacion) {
+        this.habitacion = habitacion;
+    }
 
     @Override
     public String toString() {

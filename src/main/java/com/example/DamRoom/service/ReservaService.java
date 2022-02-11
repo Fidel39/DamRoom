@@ -17,6 +17,6 @@ public interface ReservaService {
     Set<Reservas> findReservasByestado(String estado);
     Reservas addReserva(Reservas reservas);
     Reservas modifyReserva(long idReserva, Reservas newReserva);
-    Reservas checkReserva(String check,long idReserva);
+    Reservas checkReserva(String check,Reservas newReserva);
     void deleteReserva(long id);
 }

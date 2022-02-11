@@ -89,9 +89,9 @@ public class ReservaServiceImpl implements ReservaService{
     }
 
     @Override
-    public Reservas checkReserva(String check,long idReserva) {
-        Reservas reservas = reservaRepository.findReservaByidReserva(idReserva)
-                .orElseThrow(() -> new ReservaNotFoundException(idReserva));
+    public Reservas checkReserva(String check,Reservas reservas1) {
+        Reservas reservas = reservaRepository.findReservaByidReserva(reservas1.getIdReserva())
+                .orElseThrow(() -> new ReservaNotFoundException(reservas1.getIdReserva()));
 
         if(reservas.getEstado().equals("Pendiente")&&check.equals("CheckIn")){
             reservas.setEstado("En Activo");
