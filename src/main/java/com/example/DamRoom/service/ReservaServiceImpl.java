@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -45,6 +47,29 @@ public class ReservaServiceImpl implements ReservaService{
     @Override
     public Set<Reservas> findReservasByestado(String estado) {
         return reservaRepository.findReservaByestado(estado);
+    }
+
+    @Override
+    public Set<Reservas> estadisticaReservasAnuales(String anyo) {
+        String fechaInicial = anyo+"01-01";
+        String fechaFinal = anyo+"12-31";
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        Set<Reservas> reservas = reservaRepository.findAll();
+        Set<Reservas> reservasAnuales = new HashSet<>();
+        try {
+            Date fechaIni = formato.parse(fechaInicial);
+            Date fechaFin = formato.parse(fechaFinal);
+
+            for(Reservas re1 : reservas){
+                if(re1.getFechaIni().compareTo(fechaIni) >= 0 && re1.getFechaFin().compareTo(fechaFin) <= 0){
+                    reservasAnuales.add(re1);
+                }
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return reservasAnuales;
     }
 
     @Override

@@ -15,6 +15,7 @@ public interface ReservaService {
     Set<Reservas> findReservaByfechaFin(Date fechaFin);
     Set<Reservas> findReservaByimporte(float importe);
     Set<Reservas> findReservasByestado(String estado);
+    Set<Reservas> estadisticaReservasAnuales(String anyo);
     Reservas addReserva(Reservas reservas);
     Reservas modifyReserva(long idReserva, Reservas newReserva);
     Reservas checkReserva(String check,Reservas newReserva);

@@ -118,7 +118,8 @@ public class ReservasController {
         return new ResponseEntity<>(reservas, HttpStatus.OK);
     }
 
-        @Operation(summary = "Obtiene una reserva por el importe.")
+
+    @Operation(summary = "Obtiene una reserva por el estado.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado de reservas",
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
@@ -132,12 +133,34 @@ public class ReservasController {
     }
 
 
+    @Operation(summary = "Obtiene todas las reservas de un cliente.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado de reservas",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
+    })
+
     @GetMapping("/damroom/reservas/{dniCliente}")
     public ResponseEntity<Set<Reservas>> getReservasByDniCliente(@PathVariable String dniCliente) {
         Set<Reservas> reservas = null;
         reservas = reservaService.findReservaBydniCliente(dniCliente);
         return new ResponseEntity<>(reservas, HttpStatus.OK);
     }
+
+
+    @Operation(summary = "Obtiene todas las reservas de un año.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado de reservas",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Reservas.class)))),
+    })
+
+    @GetMapping("/damroom/reservas/reservasAnuales/{anyo}")
+    public ResponseEntity<Set<Reservas>> getReservasAnuales(@PathVariable String anyo) {
+        Set<Reservas> reservas = null;
+        reservas = reservaService.estadisticaReservasAnuales(anyo);
+        return new ResponseEntity<>(reservas, HttpStatus.OK);
+    }
+
+
 
 
     @Operation(summary = "Registrar una nueva reserva.")
@@ -165,7 +188,7 @@ public class ReservasController {
 
     }
 
-    @Operation(summary = "Modifica una reserva.")
+    @Operation(summary = "Elimina una reserva.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se registra la habitacion", content = @Content(schema = @Schema(implementation = Habitacion.class)))
     })

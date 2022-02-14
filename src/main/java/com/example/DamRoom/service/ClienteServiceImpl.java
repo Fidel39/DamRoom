@@ -4,7 +4,6 @@ import com.example.DamRoom.domain.Cliente;
 import com.example.DamRoom.exception.ClienteNotFoundException;
 import com.example.DamRoom.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
