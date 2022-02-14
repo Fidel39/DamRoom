@@ -51,8 +51,8 @@ public class ReservaServiceImpl implements ReservaService{
 
     @Override
     public Set<Reservas> estadisticaReservasAnuales(String anyo) {
-        String fechaInicial = anyo+"01-01";
-        String fechaFinal = anyo+"12-31";
+        String fechaInicial = anyo+"-01-01";
+        String fechaFinal = anyo+"-12-31";
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         Set<Reservas> reservas = reservaRepository.findAll();
         Set<Reservas> reservasAnuales = new HashSet<>();
