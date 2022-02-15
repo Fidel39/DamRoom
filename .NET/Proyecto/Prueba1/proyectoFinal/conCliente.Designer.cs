@@ -53,6 +53,7 @@ namespace proyectoFinal
             this.btBuscar.TabIndex = 8;
             this.btBuscar.Text = "Buscar Cliente";
             this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // tBdniCli
             // 

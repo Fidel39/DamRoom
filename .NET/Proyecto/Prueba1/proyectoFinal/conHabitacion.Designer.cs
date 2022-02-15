@@ -43,6 +43,7 @@
             this.btVisualizarHabi.TabIndex = 13;
             this.btVisualizarHabi.Text = "Visualizar";
             this.btVisualizarHabi.UseVisualStyleBackColor = true;
+            this.btVisualizarHabi.Click += new System.EventHandler(this.btVisualizarHabi_Click);
             // 
             // listViewOcupadas
             // 

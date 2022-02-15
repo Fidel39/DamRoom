@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace proyectoFinal
 {
@@ -16,5 +17,16 @@ namespace proyectoFinal
         {
             InitializeComponent();
         }
+
+        private void btVisualizarHabi_Click(object sender, EventArgs e)
+        {
+            String url = "http://localhost:8080/damroom/habitaciones";
+
+            conectar c = new conectar(url, "GET");
+            String resultado = c.getItem();
+
+            listViewLibres.Items.Add(resultado);
+        }
     }
+
 }
