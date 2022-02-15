@@ -60,3 +60,27 @@ C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe.config
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.pdb
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.estadisticas.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaHabi.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modHabi.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conCli.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaCli.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaClie.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modiCli.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaHabi.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.exe
+D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.pdb

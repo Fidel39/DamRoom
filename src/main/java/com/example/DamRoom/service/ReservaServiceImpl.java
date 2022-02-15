@@ -72,10 +72,12 @@ public class ReservaServiceImpl implements ReservaService{
         return reservasAnuales;
     }
 
+
     @Override
     public Optional<Reservas> findReservaByidReserva(long idReserva){
         return reservaRepository.findReservaByidReserva(idReserva);
     }
+
 
     @Override
     public Set<Reservas> findReservaBydniCliente(String dniCliente) {
@@ -94,7 +96,8 @@ public class ReservaServiceImpl implements ReservaService{
 
     @Override
     public Reservas addReserva(Reservas reservas){
-
+        //reservas.getHabitacion().setEstado("Ocupada");
+        System.out.println(reservas.getHabitacion().getEstado());
         return reservaRepository.save(reservas);
     }
 

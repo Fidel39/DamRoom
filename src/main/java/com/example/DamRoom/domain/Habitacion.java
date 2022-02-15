@@ -41,6 +41,13 @@ public class Habitacion {
     private Float ImporteNoche;
 
 
+    @Schema(description = "Estado  de la habitacion", example = "Libre,Ocupado", required = true)
+    @NotBlank
+    @Column
+    private String  estado = "Libre";
+
+
+
     @OneToOne(mappedBy = "habitacion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonProperty("reserva")
     private Reservas reserva ;
@@ -58,13 +65,14 @@ public class Habitacion {
         this.Tipo = habitacion.getTipo();
         this.Caracteristicas = habitacion.getCaracteristicas();
         this.ImporteNoche = habitacion.getImporteNoche();
+        this.estado = "Libre";
     }
 
     public Habitacion(String tipo, String caracteristicas, Float importeNoche) {
         this.Tipo = tipo;
         this.Caracteristicas = caracteristicas;
         this.ImporteNoche = importeNoche;
-
+        this.estado = "Libre";
     }
 
 
@@ -100,6 +108,14 @@ public class Habitacion {
 
     public void setImporteNoche(Float importeNoche) {
         ImporteNoche = importeNoche;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     @Override
