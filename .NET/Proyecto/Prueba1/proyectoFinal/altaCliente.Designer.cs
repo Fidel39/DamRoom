@@ -30,14 +30,14 @@ namespace proyectoFinal
         private void InitializeComponent()
         {
             this.labInDNI = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbDNI = new System.Windows.Forms.TextBox();
+            this.tbApeliidos = new System.Windows.Forms.TextBox();
             this.labApellidos = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.labNombre = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbTelefono = new System.Windows.Forms.TextBox();
             this.labTelefono = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbDireccion = new System.Windows.Forms.TextBox();
             this.labDire = new System.Windows.Forms.Label();
             this.btInserCli = new System.Windows.Forms.Button();
             this.groupBoxCli = new System.Windows.Forms.GroupBox();
@@ -53,19 +53,19 @@ namespace proyectoFinal
             this.labInDNI.TabIndex = 0;
             this.labInDNI.Text = "DNI:";
             // 
-            // textBox1
+            // tbDNI
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbDNI.Location = new System.Drawing.Point(62, 29);
+            this.tbDNI.Name = "tbDNI";
+            this.tbDNI.Size = new System.Drawing.Size(162, 20);
+            this.tbDNI.TabIndex = 1;
             // 
-            // textBox2
+            // tbApeliidos
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbApeliidos.Location = new System.Drawing.Point(85, 105);
+            this.tbApeliidos.Name = "tbApeliidos";
+            this.tbApeliidos.Size = new System.Drawing.Size(139, 20);
+            this.tbApeliidos.TabIndex = 3;
             // 
             // labApellidos
             // 
@@ -76,12 +76,12 @@ namespace proyectoFinal
             this.labApellidos.TabIndex = 2;
             this.labApellidos.Text = "Apellidos:";
             // 
-            // textBox3
+            // tbNombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(332, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(253, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbNombre.Location = new System.Drawing.Point(332, 25);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(253, 20);
+            this.tbNombre.TabIndex = 5;
             // 
             // labNombre
             // 
@@ -92,12 +92,12 @@ namespace proyectoFinal
             this.labNombre.TabIndex = 4;
             this.labNombre.Text = "Nombre:";
             // 
-            // textBox4
+            // tbTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(85, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 20);
-            this.textBox4.TabIndex = 7;
+            this.tbTelefono.Location = new System.Drawing.Point(85, 175);
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(139, 20);
+            this.tbTelefono.TabIndex = 7;
             // 
             // labTelefono
             // 
@@ -108,12 +108,12 @@ namespace proyectoFinal
             this.labTelefono.TabIndex = 6;
             this.labTelefono.Text = "Telefono:";
             // 
-            // textBox5
+            // tbDireccion
             // 
-            this.textBox5.Location = new System.Drawing.Point(332, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(253, 20);
-            this.textBox5.TabIndex = 9;
+            this.tbDireccion.Location = new System.Drawing.Point(332, 105);
+            this.tbDireccion.Name = "tbDireccion";
+            this.tbDireccion.Size = new System.Drawing.Size(253, 20);
+            this.tbDireccion.TabIndex = 9;
             // 
             // labDire
             // 
@@ -132,19 +132,20 @@ namespace proyectoFinal
             this.btInserCli.TabIndex = 10;
             this.btInserCli.Text = "Insertar";
             this.btInserCli.UseVisualStyleBackColor = true;
+            this.btInserCli.Click += new System.EventHandler(this.btInserCli_Click);
             // 
             // groupBoxCli
             // 
             this.groupBoxCli.Controls.Add(this.labDire);
             this.groupBoxCli.Controls.Add(this.labInDNI);
-            this.groupBoxCli.Controls.Add(this.textBox5);
-            this.groupBoxCli.Controls.Add(this.textBox1);
+            this.groupBoxCli.Controls.Add(this.tbDireccion);
+            this.groupBoxCli.Controls.Add(this.tbDNI);
             this.groupBoxCli.Controls.Add(this.labApellidos);
-            this.groupBoxCli.Controls.Add(this.textBox4);
-            this.groupBoxCli.Controls.Add(this.textBox2);
+            this.groupBoxCli.Controls.Add(this.tbTelefono);
+            this.groupBoxCli.Controls.Add(this.tbApeliidos);
             this.groupBoxCli.Controls.Add(this.labTelefono);
             this.groupBoxCli.Controls.Add(this.labNombre);
-            this.groupBoxCli.Controls.Add(this.textBox3);
+            this.groupBoxCli.Controls.Add(this.tbNombre);
             this.groupBoxCli.Location = new System.Drawing.Point(24, 131);
             this.groupBoxCli.Name = "groupBoxCli";
             this.groupBoxCli.Size = new System.Drawing.Size(619, 225);
@@ -171,14 +172,14 @@ namespace proyectoFinal
         #endregion
 
         private System.Windows.Forms.Label labInDNI;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbDNI;
+        private System.Windows.Forms.TextBox tbApeliidos;
         private System.Windows.Forms.Label labApellidos;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label labNombre;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbTelefono;
         private System.Windows.Forms.Label labTelefono;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.Label labDire;
         private System.Windows.Forms.Button btInserCli;
         private System.Windows.Forms.GroupBox groupBoxCli;

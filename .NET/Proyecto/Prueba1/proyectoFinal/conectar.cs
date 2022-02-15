@@ -72,11 +72,45 @@ namespace proyectoFinal
 
             }catch(WebException e)
             {
+                Console.WriteLine(e);
                 return null;
             }catch(JsonSerializationException e)
             {
                 return null;
             }
+        }
+
+        public String postItem(String data)
+        {
+            try
+            {
+                Stream strWriter = request.GetRequestStream();
+                if (strWriter != null)
+                {
+                    StreamWriter sw = new StreamWriter(strWriter);
+
+                    sw.Write(data);
+                    sw.Flush();
+                    sw.Close();
+
+                    WebResponse response = request.GetResponse();
+                    Stream strReader = response.GetResponseStream();
+
+                    if (strReader != null)
+                    {
+                        StreamReader sr = new StreamReader(strReader);
+                        String respuesta = sr.ReadToEnd();
+                        return respuesta;
+                    }
+                }
+                else return null;
+
+            }catch(WebException e)
+            {
+                return null;
+            }
+
+            return null;
         }
 
 
