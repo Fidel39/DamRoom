@@ -114,5 +114,19 @@ namespace proyectoFinal
         }
 
 
+        public void deleteItem(String id)
+        {
+            try
+            {
+                WebResponse response = request.GetResponse();
+                Stream strReader = response.GetResponseStream();
+
+                if (strReader == null) return;
+
+                StreamReader sr = new StreamReader(strReader);
+                String respuesta = sr.ReadToEnd();
+
+            }catch (WebException e) { }
+        }
     }
 }

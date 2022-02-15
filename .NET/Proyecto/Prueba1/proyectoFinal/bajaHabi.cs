@@ -16,5 +16,18 @@ namespace proyectoFinal
         {
             InitializeComponent();
         }
+
+        private void btBajaHabi_Click(object sender, EventArgs e)
+        {
+            String idHabi = tbNumHabi.Text;
+
+            String url = "http://localhost:8080/habitaciones/" + idHabi;
+
+            conectar c = new conectar(url, "DELETE");
+
+            c.deleteItem(idHabi);
+
+            MessageBox.Show("Se ha eliminado correctamente");
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace proyectoFinal
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labPregunta = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNumHabi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btBajaHabi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -40,7 +40,7 @@ namespace proyectoFinal
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labPregunta);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbNumHabi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(27, 196);
             this.groupBox1.Name = "groupBox1";
@@ -58,12 +58,12 @@ namespace proyectoFinal
             this.labPregunta.TabIndex = 0;
             this.labPregunta.Text = "Que habitacion quieres dar de baja? Introduzca el numero de la habitacion";
             // 
-            // textBox1
+            // tbNumHabi
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbNumHabi.Location = new System.Drawing.Point(254, 80);
+            this.tbNumHabi.Name = "tbNumHabi";
+            this.tbNumHabi.Size = new System.Drawing.Size(180, 20);
+            this.tbNumHabi.TabIndex = 2;
             // 
             // label1
             // 
@@ -82,6 +82,7 @@ namespace proyectoFinal
             this.btBajaHabi.TabIndex = 5;
             this.btBajaHabi.Text = "Eliminar";
             this.btBajaHabi.UseVisualStyleBackColor = true;
+            this.btBajaHabi.Click += new System.EventHandler(this.btBajaHabi_Click);
             // 
             // bajaHabi
             // 
@@ -103,7 +104,7 @@ namespace proyectoFinal
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labPregunta;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNumHabi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btBajaHabi;
     }

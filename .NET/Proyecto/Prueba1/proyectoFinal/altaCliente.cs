@@ -41,5 +41,10 @@ namespace proyectoFinal
 
             MessageBox.Show("Se ha insertado correctamente.");
         }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

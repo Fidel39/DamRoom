@@ -17,9 +17,24 @@ namespace proyectoFinal
             InitializeComponent();
         }
 
+        private void enables()
+        {
+            tbDNICli.Enabled = false;
+            tbHabi.Enabled = false;
+            tbImporte.Enabled = false;
+            dtFechaFin.Enabled = false;
+            dtFechaIni.Enabled = false;
+        }
+        private void btDniCli_Click(object sender, EventArgs e)
+        {
+            enables();
+            tbDNICli.Enabled = true;
+
+        }
+
         private void btAtras_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

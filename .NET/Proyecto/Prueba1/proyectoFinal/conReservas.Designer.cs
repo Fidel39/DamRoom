@@ -30,26 +30,22 @@
         {
             this.btAtras = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
-            this.checkBoxOut = new System.Windows.Forms.CheckBox();
-            this.checkBoxIn = new System.Windows.Forms.CheckBox();
-            this.labChechOut = new System.Windows.Forms.Label();
-            this.labCheckIn = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaIni = new System.Windows.Forms.DateTimePicker();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbImporte = new System.Windows.Forms.TextBox();
             this.labImporte = new System.Windows.Forms.Label();
             this.labFechFin = new System.Windows.Forms.Label();
             this.labFechIni = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbHabi = new System.Windows.Forms.TextBox();
             this.labHabit = new System.Windows.Forms.Label();
-            this.textID = new System.Windows.Forms.TextBox();
-            this.lbDNICLiente = new System.Windows.Forms.Label();
+            this.tbDNICli = new System.Windows.Forms.TextBox();
+            this.btDniCli = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btAtras
             // 
-            this.btAtras.Location = new System.Drawing.Point(35, 393);
+            this.btAtras.Location = new System.Drawing.Point(239, 393);
             this.btAtras.Name = "btAtras";
             this.btAtras.Size = new System.Drawing.Size(75, 23);
             this.btAtras.TabIndex = 33;
@@ -59,62 +55,28 @@
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(239, 393);
+            this.btBuscar.Location = new System.Drawing.Point(32, 393);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
             this.btBuscar.TabIndex = 32;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
             // 
-            // checkBoxOut
+            // dtFechaFin
             // 
-            this.checkBoxOut.AutoSize = true;
-            this.checkBoxOut.Location = new System.Drawing.Point(114, 321);
-            this.checkBoxOut.Name = "checkBoxOut";
-            this.checkBoxOut.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxOut.TabIndex = 31;
-            this.checkBoxOut.UseVisualStyleBackColor = true;
+            this.dtFechaFin.Enabled = false;
+            this.dtFechaFin.Location = new System.Drawing.Point(114, 185);
+            this.dtFechaFin.Name = "dtFechaFin";
+            this.dtFechaFin.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaFin.TabIndex = 27;
             // 
-            // checkBoxIn
+            // dtFechaIni
             // 
-            this.checkBoxIn.AutoSize = true;
-            this.checkBoxIn.Location = new System.Drawing.Point(114, 279);
-            this.checkBoxIn.Name = "checkBoxIn";
-            this.checkBoxIn.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxIn.TabIndex = 30;
-            this.checkBoxIn.UseVisualStyleBackColor = true;
-            // 
-            // labChechOut
-            // 
-            this.labChechOut.AutoSize = true;
-            this.labChechOut.Location = new System.Drawing.Point(35, 326);
-            this.labChechOut.Name = "labChechOut";
-            this.labChechOut.Size = new System.Drawing.Size(61, 13);
-            this.labChechOut.TabIndex = 29;
-            this.labChechOut.Text = "Check-Out:";
-            // 
-            // labCheckIn
-            // 
-            this.labCheckIn.AutoSize = true;
-            this.labCheckIn.Location = new System.Drawing.Point(32, 279);
-            this.labCheckIn.Name = "labCheckIn";
-            this.labCheckIn.Size = new System.Drawing.Size(53, 13);
-            this.labCheckIn.TabIndex = 28;
-            this.labCheckIn.Text = "Check-In:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(114, 185);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 27;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dtFechaIni.Enabled = false;
+            this.dtFechaIni.Location = new System.Drawing.Point(114, 140);
+            this.dtFechaIni.Name = "dtFechaIni";
+            this.dtFechaIni.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaIni.TabIndex = 26;
             // 
             // listView1
             // 
@@ -128,12 +90,13 @@
             this.listView1.TabIndex = 25;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox2
+            // tbImporte
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 24;
+            this.tbImporte.Enabled = false;
+            this.tbImporte.Location = new System.Drawing.Point(114, 223);
+            this.tbImporte.Name = "tbImporte";
+            this.tbImporte.Size = new System.Drawing.Size(200, 20);
+            this.tbImporte.TabIndex = 24;
             // 
             // labImporte
             // 
@@ -162,12 +125,13 @@
             this.labFechIni.TabIndex = 21;
             this.labFechIni.Text = "Fecha de inicio:";
             // 
-            // textBox1
+            // tbHabi
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 20;
+            this.tbHabi.Enabled = false;
+            this.tbHabi.Location = new System.Drawing.Point(114, 94);
+            this.tbHabi.Name = "tbHabi";
+            this.tbHabi.Size = new System.Drawing.Size(200, 20);
+            this.tbHabi.TabIndex = 20;
             // 
             // labHabit
             // 
@@ -178,44 +142,42 @@
             this.labHabit.TabIndex = 19;
             this.labHabit.Text = "Habitacion:";
             // 
-            // textID
+            // tbDNICli
             // 
-            this.textID.Location = new System.Drawing.Point(114, 51);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(200, 20);
-            this.textID.TabIndex = 18;
+            this.tbDNICli.Enabled = false;
+            this.tbDNICli.Location = new System.Drawing.Point(114, 51);
+            this.tbDNICli.Name = "tbDNICli";
+            this.tbDNICli.Size = new System.Drawing.Size(200, 20);
+            this.tbDNICli.TabIndex = 18;
             // 
-            // lbDNICLiente
+            // btDniCli
             // 
-            this.lbDNICLiente.AutoSize = true;
-            this.lbDNICLiente.Location = new System.Drawing.Point(26, 51);
-            this.lbDNICLiente.Name = "lbDNICLiente";
-            this.lbDNICLiente.Size = new System.Drawing.Size(64, 13);
-            this.lbDNICLiente.TabIndex = 17;
-            this.lbDNICLiente.Text = "DNI Cliente:";
+            this.btDniCli.Location = new System.Drawing.Point(29, 48);
+            this.btDniCli.Name = "btDniCli";
+            this.btDniCli.Size = new System.Drawing.Size(75, 23);
+            this.btDniCli.TabIndex = 34;
+            this.btDniCli.Text = "DNI CLiente";
+            this.btDniCli.UseVisualStyleBackColor = true;
+            this.btDniCli.Click += new System.EventHandler(this.btDniCli_Click);
             // 
             // conReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 522);
+            this.Controls.Add(this.btDniCli);
             this.Controls.Add(this.btAtras);
             this.Controls.Add(this.btBuscar);
-            this.Controls.Add(this.checkBoxOut);
-            this.Controls.Add(this.checkBoxIn);
-            this.Controls.Add(this.labChechOut);
-            this.Controls.Add(this.labCheckIn);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtFechaFin);
+            this.Controls.Add(this.dtFechaIni);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbImporte);
             this.Controls.Add(this.labImporte);
             this.Controls.Add(this.labFechFin);
             this.Controls.Add(this.labFechIni);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbHabi);
             this.Controls.Add(this.labHabit);
-            this.Controls.Add(this.textID);
-            this.Controls.Add(this.lbDNICLiente);
+            this.Controls.Add(this.tbDNICli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "conReservas";
             this.Text = "Form2";
@@ -228,20 +190,16 @@
 
         private System.Windows.Forms.Button btAtras;
         private System.Windows.Forms.Button btBuscar;
-        private System.Windows.Forms.CheckBox checkBoxOut;
-        private System.Windows.Forms.CheckBox checkBoxIn;
-        private System.Windows.Forms.Label labChechOut;
-        private System.Windows.Forms.Label labCheckIn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtFechaFin;
+        private System.Windows.Forms.DateTimePicker dtFechaIni;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.Label labImporte;
         private System.Windows.Forms.Label labFechFin;
         private System.Windows.Forms.Label labFechIni;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbHabi;
         private System.Windows.Forms.Label labHabit;
-        private System.Windows.Forms.TextBox textID;
-        private System.Windows.Forms.Label lbDNICLiente;
+        private System.Windows.Forms.TextBox tbDNICli;
+        private System.Windows.Forms.Button btDniCli;
     }
 }

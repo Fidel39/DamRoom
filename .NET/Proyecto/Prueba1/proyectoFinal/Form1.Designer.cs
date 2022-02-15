@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.btEstadisticas = new System.Windows.Forms.Button();
             this.panelSubHabi = new System.Windows.Forms.Panel();
             this.btModiHabi = new System.Windows.Forms.Button();
             this.btBajaHabi = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btEstadisticas = new System.Windows.Forms.Button();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubHabi.SuspendLayout();
             this.panelSubCliente.SuspendLayout();
@@ -76,6 +76,20 @@
             this.panelMenuLateral.Name = "panelMenuLateral";
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 561);
             this.panelMenuLateral.TabIndex = 0;
+            // 
+            // btEstadisticas
+            // 
+            this.btEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btEstadisticas.FlatAppearance.BorderSize = 0;
+            this.btEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEstadisticas.Location = new System.Drawing.Point(0, 641);
+            this.btEstadisticas.Name = "btEstadisticas";
+            this.btEstadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btEstadisticas.Size = new System.Drawing.Size(233, 45);
+            this.btEstadisticas.TabIndex = 10;
+            this.btEstadisticas.Text = "Estadisticas";
+            this.btEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEstadisticas.UseVisualStyleBackColor = true;
             // 
             // panelSubHabi
             // 
@@ -344,20 +358,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btEstadisticas
-            // 
-            this.btEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btEstadisticas.FlatAppearance.BorderSize = 0;
-            this.btEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEstadisticas.Location = new System.Drawing.Point(0, 641);
-            this.btEstadisticas.Name = "btEstadisticas";
-            this.btEstadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btEstadisticas.Size = new System.Drawing.Size(233, 45);
-            this.btEstadisticas.TabIndex = 10;
-            this.btEstadisticas.Text = "Estadisticas";
-            this.btEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEstadisticas.UseVisualStyleBackColor = true;
             // 
             // DamRoom
             // 
