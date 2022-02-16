@@ -90,6 +90,7 @@
             this.btReservar.TabIndex = 12;
             this.btReservar.Text = "Reservar";
             this.btReservar.UseVisualStyleBackColor = true;
+            this.btReservar.Click += new System.EventHandler(this.btReservar_Click);
             // 
             // gbReservas
             // 

@@ -11,6 +11,7 @@ public interface HabitacionService {
     Set<Habitacion> findAll();
     Habitacion addHabitacion(Habitacion habitacion);
     Habitacion modificarHabitacion(Long idRoom,Habitacion habitacion);
+    Habitacion reservarHabitacion(Long idRoom);
     void deleteHabitacion(Long idRoom);
 
 }

@@ -60,6 +60,7 @@ public class HabitacionController {
         return new ResponseEntity<>(habitacion, HttpStatus.OK);
     }
 
+
     @Operation(summary = "Elimina una Habitacion")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se elimina la habitacion", content = @Content(schema = @Schema(implementation = Response.class))),
@@ -68,6 +69,19 @@ public class HabitacionController {
     @DeleteMapping("/habitaciones/{idRoom}")
     public ResponseEntity<Response> deleteHabitacion(@PathVariable long idRoom) {
         habitacionService.deleteHabitacion(idRoom);
+        return new ResponseEntity<>(Response.noErrorResponse(),
+                HttpStatus.OK);
+    }
+
+
+    @Operation(summary = "Modificar el estado una Habitacion")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se elimina la habitacion", content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "404", description = "La habitacion no existe", content = @Content(schema = @Schema(implementation = Response.class)))
+    })
+    @PutMapping("/habitaciones/{idRoom}/modEstado")
+    public ResponseEntity<Response> modEstadoHabitacion(@PathVariable long idRoom) {
+        habitacionService.reservarHabitacion(idRoom);
         return new ResponseEntity<>(Response.noErrorResponse(),
                 HttpStatus.OK);
     }
