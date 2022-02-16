@@ -26,7 +26,7 @@ class Cliente{
   });
 
   Cliente.fromJsonMap(Map<String, dynamic> json){
-    dni = json['din'];
+    dni = json['dni'];
     nombre = json['nombre'];
     apellido = json['apellido'];
     direccion = json['direccion'];

@@ -56,6 +56,11 @@ namespace proyectoFinal
             long idHabitacion = Convert.ToInt64(tbHabRe.Text);
             float importe = float.Parse(textBox8.Text);
 
+            String url = "http://localhost:8080/damroom/reservas";
+            String url2 = "http://localhost:8080/habitaciones/"+idHabitacion+"/modEstado";
+
+            conectar c = new conectar(url, "POST");
+            conectar c1 = new conectar(url, "PUT");
 
             String datos = "{"+
                      "\"fechaFin\" : \"" + fechaFin + "\", " +
@@ -76,6 +81,12 @@ namespace proyectoFinal
                         "}," +
                     "\"dniCliente\" : \"" + DNICliente + "\", " +
                 "}";
+
+
+            String res = c.postItem(datos);
+            //String res1 = c1.putItem();
+
+            MessageBox.Show("Se ha insertado correctamente.");
         }
     }
 }
