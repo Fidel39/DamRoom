@@ -1,18 +1,17 @@
 
-import 'dart:ffi';
-
+//import 'dart:ffi';
 import 'package:flutter_application_1/src/models/cliente.dart';
 import 'package:flutter_application_1/src/models/habitacion.dart';
 
 class Reservas{
-  List<Reserva> items = [];
+  List<Reserva> reservas = [];
   Reservas();
   Reservas.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
-    for (var item in jsonList) {
-      final reserva = new Reserva.fromJsonMap(item);
-      items.add(reserva);
-    }
+    jsonList.forEach((element) {
+      final reserva = new Reserva.fromJsonMap(element);
+      reservas.add(reserva);
+    });
   }
 }
 
@@ -44,14 +43,13 @@ class Reserva{
     importe = json['importe'];
     estado = json['estado'];
     dniCliente = json['dniCliente'];
-    caracteristicas = json['caracteristicas'];
 
     if(json['cliente'] != null){
-      cliente = Cliente.fromJsonMap(json['cliente']);
+      cliente = Cliente.fromJson(json['cliente']);
     }
 
     if(json['habitacion'] != null){
-        habitacion = Habitacion.fromJsonMap(json['habitacion']);
+        habitacion = Habitacion.fromJson(json['habitacion']);
     }
   }
 }
