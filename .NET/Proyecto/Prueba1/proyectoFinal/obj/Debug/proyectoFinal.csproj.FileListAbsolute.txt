@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe.config
 C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe
 C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.pdb
@@ -85,68 +84,27 @@ D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1
 D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
 D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.exe
 D:\Segundo Anyo\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.pdb
-=======
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe.config
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.pdb
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.SuggestedBindingRedirects.cache
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conCliente.resources
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
-C:\Users\Quico\Documents\DAM\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
-E:\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe.config
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe
-C:\Users\dam_ftb\Desktop\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.pdb
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe.config
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.pdb
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conCli.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.exe
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.pdb
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaCli.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaClie.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modiCli.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaHabi.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaHabi.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modHabi.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.estadisticas.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.principal.resources
->>>>>>> Stashed changes
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe.config
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.exe
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\proyectoFinal.pdb
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.estadisticas.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaHabi.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modHabi.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conReservas.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conCli.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.conHabitacion.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.anyReserva.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaCli.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaClie.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modiCli.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaHabi.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.Properties.Resources.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.GenerateResource.cache
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CoreCompileInputs.cache
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.exe
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.pdb

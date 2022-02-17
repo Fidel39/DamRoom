@@ -16,5 +16,27 @@ namespace proyectoFinal
         {
             InitializeComponent();
         }
+
+        private void btModiHabi_Click(object sender, EventArgs e)
+        {
+            String numHabiAntes = tbNumHabi.Text;
+            String caracteristicas = tbCaracteristicas.Text;
+            String importe = tbImporte.Text;
+            String tipo = tbTipo.Text;
+
+            String url = "http://localhost:8080/habitaciones/" + numHabiAntes;
+
+            conectar c = new conectar(url, "PUT");
+
+            String datos = "{" +
+               "\"caracteristicas\" : \"" + caracteristicas + "\", " +
+               "\"importeNoche\" : \"" + importe + "\", " +
+               "\"tipo\" : \"" + tipo + "\"" +
+               "}";
+
+            c.putItem(numHabiAntes, datos);
+
+            MessageBox.Show("Se ha insertado correctamente.");
+        }
     }
 }

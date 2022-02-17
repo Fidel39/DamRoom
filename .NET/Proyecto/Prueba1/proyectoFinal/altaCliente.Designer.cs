@@ -127,11 +127,16 @@ namespace proyectoFinal
             // 
             // btInserCli
             // 
-            this.btInserCli.Location = new System.Drawing.Point(466, 458);
+            this.btInserCli.FlatAppearance.BorderSize = 0;
+            this.btInserCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserCli.Image = global::proyectoFinal.Properties.Resources.___2_;
+            this.btInserCli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btInserCli.Location = new System.Drawing.Point(469, 445);
             this.btInserCli.Name = "btInserCli";
             this.btInserCli.Size = new System.Drawing.Size(75, 23);
             this.btInserCli.TabIndex = 10;
             this.btInserCli.Text = "Insertar";
+            this.btInserCli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInserCli.UseVisualStyleBackColor = true;
             this.btInserCli.Click += new System.EventHandler(this.btInserCli_Click);
             // 
@@ -156,11 +161,16 @@ namespace proyectoFinal
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(568, 458);
+            this.btSalir.FlatAppearance.BorderSize = 0;
+            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
+            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSalir.Location = new System.Drawing.Point(568, 445);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 12;
             this.btSalir.Text = "Salir";
+            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
@@ -168,7 +178,6 @@ namespace proyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.groupBoxCli);

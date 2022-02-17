@@ -30,30 +30,25 @@ namespace proyectoFinal
         private void InitializeComponent()
         {
             this.btSalir = new System.Windows.Forms.Button();
-            this.btBuscar = new System.Windows.Forms.Button();
             this.tBdniCli = new System.Windows.Forms.TextBox();
             this.labDNI = new System.Windows.Forms.Label();
             this.listViewClientes = new System.Windows.Forms.ListView();
+            this.btBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(535, 400);
+            this.btSalir.FlatAppearance.BorderSize = 0;
+            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
+            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSalir.Location = new System.Drawing.Point(535, 402);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 9;
             this.btSalir.Text = "Salir";
+            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSalir.UseVisualStyleBackColor = true;
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Location = new System.Drawing.Point(333, 400);
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(125, 23);
-            this.btBuscar.TabIndex = 8;
-            this.btBuscar.Text = "Buscar Cliente";
-            this.btBuscar.UseVisualStyleBackColor = true;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // tBdniCli
             // 
@@ -79,6 +74,21 @@ namespace proyectoFinal
             this.listViewClientes.Size = new System.Drawing.Size(571, 322);
             this.listViewClientes.TabIndex = 5;
             this.listViewClientes.UseCompatibleStateImageBehavior = false;
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.FlatAppearance.BorderSize = 0;
+            this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBuscar.Image = global::proyectoFinal.Properties.Resources.lupa1;
+            this.btBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btBuscar.Location = new System.Drawing.Point(345, 398);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(113, 27);
+            this.btBuscar.TabIndex = 8;
+            this.btBuscar.Text = "Buscar Cliente";
+            this.btBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // conCli
             // 

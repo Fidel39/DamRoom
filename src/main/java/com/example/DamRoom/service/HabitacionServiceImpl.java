@@ -44,6 +44,18 @@ public class HabitacionServiceImpl implements HabitacionService{
     }
 
     @Override
+    public Habitacion reservarHabitacion(Long idRoom) {
+        Habitacion  habitacion = habitacionRepository.findByIdRoom(idRoom)
+                .orElseThrow(() -> new HabitacionNotFoundException(idRoom));
+        if(habitacion.getEstado().equals("Libre")){
+            habitacion.setEstado("Ocupada");
+        }else if(habitacion.getEstado().equals("Ocupada.")){
+            habitacion.setEstado("Libre");
+        }
+        return habitacionRepository.save(habitacion);
+    }
+
+    @Override
     public void deleteHabitacion(Long idRoom) {
         habitacionRepository.findByIdRoom(idRoom)
                 .orElseThrow(() -> new HabitacionNotFoundException(idRoom));

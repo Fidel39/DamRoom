@@ -76,11 +76,16 @@ namespace proyectoFinal
             // 
             // btEliminarCli
             // 
-            this.btEliminarCli.Location = new System.Drawing.Point(567, 443);
+            this.btEliminarCli.FlatAppearance.BorderSize = 0;
+            this.btEliminarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEliminarCli.Image = global::proyectoFinal.Properties.Resources.delete__2_;
+            this.btEliminarCli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btEliminarCli.Location = new System.Drawing.Point(561, 433);
             this.btEliminarCli.Name = "btEliminarCli";
-            this.btEliminarCli.Size = new System.Drawing.Size(75, 23);
+            this.btEliminarCli.Size = new System.Drawing.Size(81, 34);
             this.btEliminarCli.TabIndex = 4;
             this.btEliminarCli.Text = "Eliminar";
+            this.btEliminarCli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEliminarCli.UseVisualStyleBackColor = true;
             this.btEliminarCli.Click += new System.EventHandler(this.btEliminarCli_Click);
             // 

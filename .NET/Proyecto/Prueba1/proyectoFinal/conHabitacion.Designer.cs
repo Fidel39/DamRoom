@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btVisualizarHabi = new System.Windows.Forms.Button();
             this.labOcupadas = new System.Windows.Forms.Label();
             this.labLibres = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -41,19 +40,10 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btVisualizarHabi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btVisualizarHabi
-            // 
-            this.btVisualizarHabi.Location = new System.Drawing.Point(268, 85);
-            this.btVisualizarHabi.Name = "btVisualizarHabi";
-            this.btVisualizarHabi.Size = new System.Drawing.Size(75, 23);
-            this.btVisualizarHabi.TabIndex = 13;
-            this.btVisualizarHabi.Text = "Visualizar";
-            this.btVisualizarHabi.UseVisualStyleBackColor = true;
-            this.btVisualizarHabi.Click += new System.EventHandler(this.btVisualizarHabi_Click);
             // 
             // labOcupadas
             // 
@@ -139,6 +129,21 @@
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Importe (Por Noche)";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // btVisualizarHabi
+            // 
+            this.btVisualizarHabi.FlatAppearance.BorderSize = 0;
+            this.btVisualizarHabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVisualizarHabi.Image = global::proyectoFinal.Properties.Resources.visualizar;
+            this.btVisualizarHabi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btVisualizarHabi.Location = new System.Drawing.Point(269, 77);
+            this.btVisualizarHabi.Name = "btVisualizarHabi";
+            this.btVisualizarHabi.Size = new System.Drawing.Size(102, 48);
+            this.btVisualizarHabi.TabIndex = 13;
+            this.btVisualizarHabi.Text = "Visualizar";
+            this.btVisualizarHabi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVisualizarHabi.UseVisualStyleBackColor = true;
+            this.btVisualizarHabi.Click += new System.EventHandler(this.btVisualizarHabi_Click);
             // 
             // conHabitacion
             // 

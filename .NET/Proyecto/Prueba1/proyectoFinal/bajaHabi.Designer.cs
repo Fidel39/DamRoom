@@ -76,13 +76,17 @@ namespace proyectoFinal
             // 
             // btBajaHabi
             // 
+            this.btBajaHabi.FlatAppearance.BorderSize = 0;
+            this.btBajaHabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBajaHabi.Image = global::proyectoFinal.Properties.Resources.delete__2_;
+            this.btBajaHabi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btBajaHabi.Location = new System.Drawing.Point(567, 451);
             this.btBajaHabi.Name = "btBajaHabi";
             this.btBajaHabi.Size = new System.Drawing.Size(75, 23);
             this.btBajaHabi.TabIndex = 5;
             this.btBajaHabi.Text = "Eliminar";
+            this.btBajaHabi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBajaHabi.UseVisualStyleBackColor = true;
-            this.btBajaHabi.Click += new System.EventHandler(this.btBajaHabi_Click);
             // 
             // bajaHabi
             // 

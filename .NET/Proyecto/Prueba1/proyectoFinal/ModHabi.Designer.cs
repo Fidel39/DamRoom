@@ -29,37 +29,26 @@ namespace proyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            this.btModiHabi = new System.Windows.Forms.Button();
             this.groupBoxModHab = new System.Windows.Forms.GroupBox();
             this.labPregunta = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbNumHabi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxHabi = new System.Windows.Forms.GroupBox();
             this.labDire = new System.Windows.Forms.Label();
-            this.labInDNI = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTipo = new System.Windows.Forms.TextBox();
             this.labApellidos = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbImporte = new System.Windows.Forms.TextBox();
             this.labNombre = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbCaracteristicas = new System.Windows.Forms.TextBox();
+            this.btModiHabi = new System.Windows.Forms.Button();
             this.groupBoxModHab.SuspendLayout();
             this.groupBoxHabi.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btModiHabi
-            // 
-            this.btModiHabi.Location = new System.Drawing.Point(569, 452);
-            this.btModiHabi.Name = "btModiHabi";
-            this.btModiHabi.Size = new System.Drawing.Size(75, 23);
-            this.btModiHabi.TabIndex = 14;
-            this.btModiHabi.Text = "Modificar";
-            this.btModiHabi.UseVisualStyleBackColor = true;
-            // 
             // groupBoxModHab
             // 
             this.groupBoxModHab.Controls.Add(this.labPregunta);
-            this.groupBoxModHab.Controls.Add(this.textBox6);
+            this.groupBoxModHab.Controls.Add(this.tbNumHabi);
             this.groupBoxModHab.Controls.Add(this.label1);
             this.groupBoxModHab.Location = new System.Drawing.Point(25, 40);
             this.groupBoxModHab.Name = "groupBoxModHab";
@@ -77,12 +66,12 @@ namespace proyectoFinal
             this.labPregunta.TabIndex = 0;
             this.labPregunta.Text = "Que habitacion quieres modificar? Introduzca el numero de la habitacion";
             // 
-            // textBox6
+            // tbNumHabi
             // 
-            this.textBox6.Location = new System.Drawing.Point(254, 80);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 20);
-            this.textBox6.TabIndex = 2;
+            this.tbNumHabi.Location = new System.Drawing.Point(254, 80);
+            this.tbNumHabi.Name = "tbNumHabi";
+            this.tbNumHabi.Size = new System.Drawing.Size(180, 20);
+            this.tbNumHabi.TabIndex = 2;
             // 
             // label1
             // 
@@ -96,13 +85,11 @@ namespace proyectoFinal
             // groupBoxHabi
             // 
             this.groupBoxHabi.Controls.Add(this.labDire);
-            this.groupBoxHabi.Controls.Add(this.labInDNI);
-            this.groupBoxHabi.Controls.Add(this.textBox5);
-            this.groupBoxHabi.Controls.Add(this.textBox1);
+            this.groupBoxHabi.Controls.Add(this.tbTipo);
             this.groupBoxHabi.Controls.Add(this.labApellidos);
-            this.groupBoxHabi.Controls.Add(this.textBox2);
+            this.groupBoxHabi.Controls.Add(this.tbImporte);
             this.groupBoxHabi.Controls.Add(this.labNombre);
-            this.groupBoxHabi.Controls.Add(this.textBox3);
+            this.groupBoxHabi.Controls.Add(this.tbCaracteristicas);
             this.groupBoxHabi.Location = new System.Drawing.Point(21, 208);
             this.groupBoxHabi.Name = "groupBoxHabi";
             this.groupBoxHabi.Size = new System.Drawing.Size(619, 176);
@@ -119,28 +106,12 @@ namespace proyectoFinal
             this.labDire.TabIndex = 8;
             this.labDire.Text = "Tipo:";
             // 
-            // labInDNI
+            // tbTipo
             // 
-            this.labInDNI.AutoSize = true;
-            this.labInDNI.Location = new System.Drawing.Point(27, 32);
-            this.labInDNI.Name = "labInDNI";
-            this.labInDNI.Size = new System.Drawing.Size(21, 13);
-            this.labInDNI.TabIndex = 0;
-            this.labInDNI.Text = "ID:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(334, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(249, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(62, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbTipo.Location = new System.Drawing.Point(334, 105);
+            this.tbTipo.Name = "tbTipo";
+            this.tbTipo.Size = new System.Drawing.Size(249, 20);
+            this.tbTipo.TabIndex = 9;
             // 
             // labApellidos
             // 
@@ -151,12 +122,12 @@ namespace proyectoFinal
             this.labApellidos.TabIndex = 2;
             this.labApellidos.Text = "Importe:";
             // 
-            // textBox2
+            // tbImporte
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbImporte.Location = new System.Drawing.Point(85, 105);
+            this.tbImporte.Name = "tbImporte";
+            this.tbImporte.Size = new System.Drawing.Size(139, 20);
+            this.tbImporte.TabIndex = 3;
             // 
             // labNombre
             // 
@@ -167,12 +138,27 @@ namespace proyectoFinal
             this.labNombre.TabIndex = 4;
             this.labNombre.Text = "Caracteristicas:";
             // 
-            // textBox3
+            // tbCaracteristicas
             // 
-            this.textBox3.Location = new System.Drawing.Point(332, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbCaracteristicas.Location = new System.Drawing.Point(332, 29);
+            this.tbCaracteristicas.Name = "tbCaracteristicas";
+            this.tbCaracteristicas.Size = new System.Drawing.Size(251, 20);
+            this.tbCaracteristicas.TabIndex = 5;
+            // 
+            // btModiHabi
+            // 
+            this.btModiHabi.FlatAppearance.BorderSize = 0;
+            this.btModiHabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btModiHabi.Image = global::proyectoFinal.Properties.Resources.modificar;
+            this.btModiHabi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btModiHabi.Location = new System.Drawing.Point(534, 437);
+            this.btModiHabi.Name = "btModiHabi";
+            this.btModiHabi.Size = new System.Drawing.Size(106, 36);
+            this.btModiHabi.TabIndex = 14;
+            this.btModiHabi.Text = "Modificar";
+            this.btModiHabi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btModiHabi.UseVisualStyleBackColor = true;
+            this.btModiHabi.Click += new System.EventHandler(this.btModiHabi_Click);
             // 
             // modHabi
             // 
@@ -197,16 +183,14 @@ namespace proyectoFinal
         private System.Windows.Forms.Button btModiHabi;
         private System.Windows.Forms.GroupBox groupBoxModHab;
         private System.Windows.Forms.Label labPregunta;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbNumHabi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxHabi;
         private System.Windows.Forms.Label labDire;
-        private System.Windows.Forms.Label labInDNI;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTipo;
         private System.Windows.Forms.Label labApellidos;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.Label labNombre;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbCaracteristicas;
     }
 }

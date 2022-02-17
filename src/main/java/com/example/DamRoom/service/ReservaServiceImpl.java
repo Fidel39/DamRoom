@@ -96,8 +96,6 @@ public class ReservaServiceImpl implements ReservaService{
 
     @Override
     public Reservas addReserva(Reservas reservas){
-        //reservas.getHabitacion().setEstado("Ocupada");
-        System.out.println(reservas.getHabitacion().getEstado());
         return reservaRepository.save(reservas);
     }
 

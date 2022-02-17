@@ -30,7 +30,6 @@
         {
             this.btClienteExist = new System.Windows.Forms.Button();
             this.btClienteNuevo = new System.Windows.Forms.Button();
-            this.btReservar = new System.Windows.Forms.Button();
             this.gbReservas = new System.Windows.Forms.GroupBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.lbImporte = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.lbNombre = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbDNI = new System.Windows.Forms.Label();
+            this.btReservar = new System.Windows.Forms.Button();
             this.gbReservas.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.SuspendLayout();
@@ -81,15 +81,6 @@
             this.btClienteNuevo.Text = "Cliente Nuevo";
             this.btClienteNuevo.UseVisualStyleBackColor = true;
             this.btClienteNuevo.Click += new System.EventHandler(this.btClienteNuevo_Click);
-            // 
-            // btReservar
-            // 
-            this.btReservar.Location = new System.Drawing.Point(565, 417);
-            this.btReservar.Name = "btReservar";
-            this.btReservar.Size = new System.Drawing.Size(75, 23);
-            this.btReservar.TabIndex = 12;
-            this.btReservar.Text = "Reservar";
-            this.btReservar.UseVisualStyleBackColor = true;
             // 
             // gbReservas
             // 
@@ -288,6 +279,21 @@
             this.lbDNI.Size = new System.Drawing.Size(29, 13);
             this.lbDNI.TabIndex = 0;
             this.lbDNI.Text = "DNI:";
+            // 
+            // btReservar
+            // 
+            this.btReservar.FlatAppearance.BorderSize = 0;
+            this.btReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btReservar.Image = global::proyectoFinal.Properties.Resources.reserva;
+            this.btReservar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btReservar.Location = new System.Drawing.Point(554, 445);
+            this.btReservar.Name = "btReservar";
+            this.btReservar.Size = new System.Drawing.Size(86, 23);
+            this.btReservar.TabIndex = 12;
+            this.btReservar.Text = "Reservar";
+            this.btReservar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btReservar.UseVisualStyleBackColor = true;
+            this.btReservar.Click += new System.EventHandler(this.btReservar_Click);
             // 
             // anyReserva
             // 

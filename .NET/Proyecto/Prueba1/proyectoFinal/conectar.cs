@@ -44,15 +44,6 @@ namespace proyectoFinal
 
         }
 
-        class habitaciones
-        {
-            public long idRoom {get; set;}
-            public String Tipo { get; set; }
-            public String Caracteristicas { get; set; }
-            public float ImporteNoche { get; set; }
-
-        }
-
         public String getItem()
         {
             try
@@ -113,7 +104,6 @@ namespace proyectoFinal
             return null;
         }
 
-
         public void deleteItem(String id)
         {
             try
@@ -126,7 +116,33 @@ namespace proyectoFinal
                 StreamReader sr = new StreamReader(strReader);
                 String respuesta = sr.ReadToEnd();
 
-            }catch (WebException e) { }
+            }
+            catch (WebException e) { }
+        }
+
+        public void putItem(String id, String data)
+        {
+            Stream strWriter = request.GetRequestStream();
+            StreamWriter sw = new StreamWriter(strWriter);
+
+            sw.Write(data);
+            sw.Flush();
+            sw.Close();
+
+            try
+            {
+                WebResponse response = request.GetResponse();
+                Stream strReader = response.GetResponseStream();
+
+                if (strReader == null) return;
+
+                StreamReader sr = new StreamReader(strReader);
+                String respuesta = sr.ReadToEnd();
+
+            }
+            catch (WebException e) { }
+
+
         }
     }
 }

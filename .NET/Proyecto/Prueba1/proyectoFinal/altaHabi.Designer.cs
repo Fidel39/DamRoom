@@ -36,8 +36,8 @@ namespace proyectoFinal
             this.tbImporte = new System.Windows.Forms.TextBox();
             this.labNombre = new System.Windows.Forms.Label();
             this.tbCaracteristicas = new System.Windows.Forms.TextBox();
-            this.btInserHabi = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
+            this.btInserHabi = new System.Windows.Forms.Button();
             this.groupBoxCli.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,31 +104,40 @@ namespace proyectoFinal
             this.tbCaracteristicas.Size = new System.Drawing.Size(251, 20);
             this.tbCaracteristicas.TabIndex = 5;
             // 
-            // btInserHabi
-            // 
-            this.btInserHabi.Location = new System.Drawing.Point(466, 440);
-            this.btInserHabi.Name = "btInserHabi";
-            this.btInserHabi.Size = new System.Drawing.Size(75, 23);
-            this.btInserHabi.TabIndex = 13;
-            this.btInserHabi.Text = "Insertar";
-            this.btInserHabi.UseVisualStyleBackColor = true;
-            this.btInserHabi.Click += new System.EventHandler(this.btInserHabi_Click);
-            // 
             // btSalir
             // 
+            this.btSalir.FlatAppearance.BorderSize = 0;
+            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
+            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSalir.Location = new System.Drawing.Point(569, 440);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 14;
             this.btSalir.Text = "Salir";
+            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
+            // 
+            // btInserHabi
+            // 
+            this.btInserHabi.FlatAppearance.BorderSize = 0;
+            this.btInserHabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserHabi.Image = global::proyectoFinal.Properties.Resources.___2_;
+            this.btInserHabi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btInserHabi.Location = new System.Drawing.Point(462, 440);
+            this.btInserHabi.Name = "btInserHabi";
+            this.btInserHabi.Size = new System.Drawing.Size(75, 23);
+            this.btInserHabi.TabIndex = 13;
+            this.btInserHabi.Text = "Insertar";
+            this.btInserHabi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInserHabi.UseVisualStyleBackColor = true;
+            this.btInserHabi.Click += new System.EventHandler(this.btInserHabi_Click);
             // 
             // altaHabi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btInserHabi);
