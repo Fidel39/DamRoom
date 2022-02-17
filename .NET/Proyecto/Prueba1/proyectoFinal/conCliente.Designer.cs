@@ -32,8 +32,14 @@ namespace proyectoFinal
             this.btSalir = new System.Windows.Forms.Button();
             this.tBdniCli = new System.Windows.Forms.TextBox();
             this.labDNI = new System.Windows.Forms.Label();
-            this.listViewClientes = new System.Windows.Forms.ListView();
             this.btBuscar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btSalir
@@ -66,15 +72,6 @@ namespace proyectoFinal
             this.labDNI.TabIndex = 6;
             this.labDNI.Text = "DNI:";
             // 
-            // listViewClientes
-            // 
-            this.listViewClientes.HideSelection = false;
-            this.listViewClientes.Location = new System.Drawing.Point(39, 55);
-            this.listViewClientes.Name = "listViewClientes";
-            this.listViewClientes.Size = new System.Drawing.Size(571, 322);
-            this.listViewClientes.TabIndex = 5;
-            this.listViewClientes.UseCompatibleStateImageBehavior = false;
-            // 
             // btBuscar
             // 
             this.btBuscar.FlatAppearance.BorderSize = 0;
@@ -90,19 +87,60 @@ namespace proyectoFinal
             this.btBuscar.UseVisualStyleBackColor = true;
             this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DNI,
+            this.Nombre,
+            this.apellidos,
+            this.Direccion,
+            this.Telefono});
+            this.dataGridView1.Location = new System.Drawing.Point(54, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(542, 281);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // apellidos
+            // 
+            this.apellidos.HeaderText = "Apellidos";
+            this.apellidos.Name = "apellidos";
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
             // conCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(652, 483);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.tBdniCli);
             this.Controls.Add(this.labDNI);
-            this.Controls.Add(this.listViewClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "conCli";
             this.Text = "Consultar Cliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +152,11 @@ namespace proyectoFinal
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.TextBox tBdniCli;
         private System.Windows.Forms.Label labDNI;
-        private System.Windows.Forms.ListView listViewClientes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }
 }

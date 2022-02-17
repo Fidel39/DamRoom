@@ -106,7 +106,12 @@ namespace proyectoFinal
             conectar c = new conectar(url, "GET");
             String resultado = c.getItem();
 
-            listViewReservas.Items.Add(resultado);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

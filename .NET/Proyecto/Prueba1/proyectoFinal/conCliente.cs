@@ -18,25 +18,29 @@ namespace proyectoFinal
             InitializeComponent();
         }
 
-        class Cliente
-        {
-            public String dni { set; get; }
-            public String nombre { set; get; }
-            public String apellido { set; get; }
-            public String direccion { set; get; }
-            public int telefono { set; get; }
-        }
-
         private void btBuscar_Click(object sender, EventArgs e)
         {
+            Cliente cliente;
             String dni = tBdniCli.Text;
             String url = "http://localhost:8080/clientes/" + dni;
 
             conectar c = new conectar(url, "GET");
             String resultado = c.getItem();
-            Cliente cl = JsonConvert.DeserializeObject<Cliente>(resultado);
+            Cliente m = JsonConvert.DeserializeObject<Cliente>(resultado);
+            String Dni;
+            String nombre;
+            String apellidos;
+            String direccion;
+            int telefono;
 
-            listViewClientes.Items.Add(resultado);
+            Dni = m.Dni;
+            nombre = m.Nombre;
+            apellidos = m.Apellidos;
+            direccion = m.Direccion;
+            telefono = m.Telefono;
+
+            dataGridView1.Rows.Add(Dni, nombre, apellidos, direccion, telefono);
         }
     }
+
 }

@@ -17,65 +17,41 @@ namespace proyectoFinal
             InitializeComponent();
         }
 
-        private void btClienteNuevo_Click(object sender, EventArgs e)
-        {
-            gbCliente.Visible = true;
-            gbReservas.Location = new Point(40, 240);
-            lbDniCliRe.Visible = false;
-            tbCliRe.Visible = false;
-            btClienteNuevo.Enabled = false;
-            btClienteExist.Enabled = true;
-        }
-
-        private void btClienteExist_Click(object sender, EventArgs e)
-        {
-            gbCliente.Visible = false;
-            gbReservas.Location = new Point(40, 65);
-            lbDniCliRe.Visible = true;
-            tbCliRe.Visible = true;
-            btClienteExist.Enabled = false;
-            btClienteNuevo.Enabled = true;
-        }
-
-        private void anyCliente_Load(object sender, EventArgs e)
-        {
-            lbDniCliRe.Visible = false;
-            tbCliRe.Visible = false;
-        }
-
         private void btReservar_Click(object sender, EventArgs e)
         {
-            String fehaIni = dateTimePicker1.Value.ToString();
-            String fechaFin = dateTimePicker2.Value.ToString();
-            String dniCliente = tbCliRe.Text;
-            String DNICliente = textBox1.Text;
-            String nombreCliente = textBox2.Text;
-            String apellidosCliente = textBox3.Text;
-            String direccionCliente = textBox4.Text;
-            int telefonoCliente = Convert.ToInt32(textBox5.Text);
+
+            DateTime fehaIni = dtFechaIni.Value;
+            String fi = fehaIni.ToString("yyyy-MM-dd");
+
+            DateTime fechaFin = dtFechaFin.Value;
+            String ff = fechaFin.ToString("yyyy-MM-dd");
+
             long idHabitacion = Convert.ToInt64(tbHabRe.Text);
-            float importe = float.Parse(textBox8.Text);
+            float importe = float.Parse(tbImporte.Text);
+            String dniCliente = tbCliRe.Text;
+            Console.WriteLine(fehaIni);
+            String url = "http://localhost:8080/damroom/reservas";
 
+            conectar c = new conectar(url, "POST");
 
-            String datos = "{"+
-                     "\"fechaFin\" : \"" + fechaFin + "\", " +
-                    "\"fechaIni\" : \"" + fehaIni + "\", " +
-                    "\"importe\" : \"" + importe + "\", " +
-                    "\"estado\" : \"" + "Pendiente" +"\", " +
-
-                        "cliente"+"{" +
-                            "\"dni\" : \"" + DNICliente + "\", " +
-                            "\"nombre\" : \"" + nombreCliente + "\", " +
-                            "\"apellido\" : \"" + apellidosCliente + "\", " +
-                            "\"direccion\" : \"" + direccionCliente + "\", " +
-                            "\"telefono\" : \"" + telefonoCliente + "\" " +
-                        "}," +
-
-                        "habitacion"+"{" +
-                            "\"idRoom\" : \"" + idHabitacion + "\", " +
-                        "}," +
-                    "\"dniCliente\" : \"" + DNICliente + "\", " +
+            String datos = "{" +
+                "\"dniCliente\" : \"" + dniCliente + "\", " +
+                 "\"estado\" : \"" + "Pendiente" + "\", " +
+                "\"fechaFin\" : \"" + ff + "\", " +
+                "\"fechaIni\" : \"" + fi + "\", " +
+                "\"importe\" : \"" + importe + "\", " +
+                "\"cliente\" :{"+"\"dni\" : \"" +dniCliente+"\""+"},"+
+                "\"habitacion\" :{" + "\"idRoom\" : \"" + idHabitacion + "\"" + "}" +
                 "}";
+
+
+            String res = c.postItem(datos);
+
+            MessageBox.Show("Se ha insertado correctamente.");
+
+            String url2 = "http://localhost:8080/habitaciones/"+idHabitacion +"/tramite";
+            conectar c2 = new conectar(url2, "PUT");
+
         }
     }
 }

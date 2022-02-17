@@ -49,7 +49,7 @@ namespace proyectoFinal
             this.groupBoxCli.Controls.Add(this.tbImporte);
             this.groupBoxCli.Controls.Add(this.labNombre);
             this.groupBoxCli.Controls.Add(this.tbCaracteristicas);
-            this.groupBoxCli.Location = new System.Drawing.Point(25, 149);
+            this.groupBoxCli.Location = new System.Drawing.Point(25, 165);
             this.groupBoxCli.Name = "groupBoxCli";
             this.groupBoxCli.Size = new System.Drawing.Size(619, 176);
             this.groupBoxCli.TabIndex = 12;
@@ -91,7 +91,7 @@ namespace proyectoFinal
             // labNombre
             // 
             this.labNombre.AutoSize = true;
-            this.labNombre.Location = new System.Drawing.Point(249, 32);
+            this.labNombre.Location = new System.Drawing.Point(27, 36);
             this.labNombre.Name = "labNombre";
             this.labNombre.Size = new System.Drawing.Size(79, 13);
             this.labNombre.TabIndex = 4;
@@ -99,9 +99,9 @@ namespace proyectoFinal
             // 
             // tbCaracteristicas
             // 
-            this.tbCaracteristicas.Location = new System.Drawing.Point(332, 29);
+            this.tbCaracteristicas.Location = new System.Drawing.Point(112, 33);
             this.tbCaracteristicas.Name = "tbCaracteristicas";
-            this.tbCaracteristicas.Size = new System.Drawing.Size(251, 20);
+            this.tbCaracteristicas.Size = new System.Drawing.Size(471, 20);
             this.tbCaracteristicas.TabIndex = 5;
             // 
             // btSalir
@@ -138,6 +138,7 @@ namespace proyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btInserHabi);
