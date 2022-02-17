@@ -1,93 +1,98 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/models/reserva.dart';
 import 'package:flutter_application_1/src/providers/reservas_providers.dart';
-
 
 class Calendario extends StatefulWidget {
   @override
   _CalendarioState createState() => _CalendarioState();
 }
 
-class _CalendarioState extends State<Calendario>{
-    
-    TextEditingController _inputFieldDateController = new TextEditingController();
-    String _fecha = '';
+class _CalendarioState extends State<Calendario> {
+  TextEditingController _inputFieldDateController = new TextEditingController();
+  String _fecha = '';
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: Text("Todas las reservas"),
         backgroundColor: Colors.black,
         actions: [
-          IconButton(
-            icon: Icon(Icons.date_range_outlined),
-            onPressed: (){
-                _crearReservas();
-            }
-          )
+          IconButton(icon: Icon(Icons.date_range_outlined), onPressed: () {})
         ],
       ),
       body: Container(
-        child:  SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Divider(),
-              _crearFecha(context),
-      
-            ],),
-        )
-      ),
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Divider(),
+                _crearFecha(context),
+              ],
+            ),
+          )),
     );
   }
 
+  Widget _crearReservas() {
+    final reservasProvider = ReservasProvider();
 
+    return FutureBuilder(
+        future: reservasProvider.getReservasPorFechaIni(_fecha),
+        builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
+          if (snapshot.hasData) {
+            return _listaReservas(snapshot.data!);
+          } else {
+            return const Center();
+          }
+        });
+  }
 
+  Widget _listaReservas(List<dynamic> reservas) {
+    if (_asignarFecha()) {
+      return ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: reservas.length,
+        itemBuilder: (BuildContext context, int index) {
+          final codReserva = reservas[index].idReserva;
+          final fechaInicio = reservas[index].fechaIni;
+          final fechaFin = reservas[index].fechaFin;
+          final importe = reservas[index].importe;
+          final dniCliente = reservas[index].dniCliente;
+          final caracteristicas = reservas[index].caracteristicas;
+          final cliente = reservas[index].cliente;
+          final habitacion = reservas[index].habitacion;
 
-Widget _crearReservas(){
-  final reservasProvider = ReservasProvider();
-
-  return FutureBuilder(
-    future: reservasProvider.getReservasPorFechaIni(_fecha),
-    builder: (BuildContext context, AsyncSnapshot<List> snapshot){
-      if(snapshot.hasData){
-        return _listaReservas(snapshot.data!);
-      }else{
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      }
+          return Container(
+            padding: EdgeInsets.fromLTRB(10,10,10,10),
+            height: 80,
+            child: Card(
+              shadowColor: Colors.black45,
+              color: Colors.black45,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24)),
+              child: GestureDetector(
+                onTap: () async => Navigator.pushNamed(context, 'detallesReserva',
+                  arguments: 2),
+                  child: 
+                    Text("DNI Cliente: " +
+                        dniCliente.toString() +
+                        "                  Importe: " +
+                        importe.toString() +
+                        "€"),
+                    //Text("Habitacion: " + habitacion!.idRoom.toString()),
+                ),
+              ),
+            );
+        },
+      );
+    } else {
+      return Container();
     }
-  );
-}
-
-
-Widget _listaReservas(List<dynamic> reservas){
-  return ListView.builder(
-    physics: const NeverScrollableScrollPhysics(),
-    shrinkWrap: true,
-    itemCount: reservas.length,
-    itemBuilder: (BuildContext context, int index){
-        final codReserva = reservas[index].idReservas;
-        final fechaInicio = reservas[index].fechaIni;
-        final fechaFin = reservas[index].fechaFin;
-        final importe = reservas[index].importe;
-        final dniCliente = reservas[index].dniCliente;
-        final caracteristicas = reservas[index].caracteristicas;
-        final cliente = reservas[index].cliente;
-        final habitacion = reservas[index].habitacion;
-        
-        return Container(
-          child: Row(
-            children: [
-              Text("Dni Cliente: "+dniCliente,),
-            ],
-          ),
-        );
-    }
-  );
-}
-
+  }
 
   Widget _crearFecha(BuildContext context) {
     return TextField(
@@ -117,7 +122,18 @@ Widget _listaReservas(List<dynamic> reservas){
         _fecha = picked.toString();
         print(_fecha);
         _inputFieldDateController.text = _fecha;
+        _crearReservas();
       });
     }
+  }
+
+  bool _asignarFecha() {
+    bool comp = false;
+    if (_fecha != null) {
+      comp = true;
+    } else {
+      comp = false;
+    }
+    return comp;
   }
 }
