@@ -29,8 +29,6 @@ namespace proyectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            this.btSalir = new System.Windows.Forms.Button();
-            this.tBdniCli = new System.Windows.Forms.TextBox();
             this.labDNI = new System.Windows.Forms.Label();
             this.btBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -39,29 +37,9 @@ namespace proyectoFinal
             this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbDniCli = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btSalir
-            // 
-            this.btSalir.FlatAppearance.BorderSize = 0;
-            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
-            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSalir.Location = new System.Drawing.Point(535, 402);
-            this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
-            this.btSalir.TabIndex = 9;
-            this.btSalir.Text = "Salir";
-            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalir.UseVisualStyleBackColor = true;
-            // 
-            // tBdniCli
-            // 
-            this.tBdniCli.Location = new System.Drawing.Point(71, 402);
-            this.tBdniCli.Name = "tBdniCli";
-            this.tBdniCli.Size = new System.Drawing.Size(185, 20);
-            this.tBdniCli.TabIndex = 7;
             // 
             // labDNI
             // 
@@ -78,7 +56,7 @@ namespace proyectoFinal
             this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBuscar.Image = global::proyectoFinal.Properties.Resources.lupa1;
             this.btBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btBuscar.Location = new System.Drawing.Point(345, 398);
+            this.btBuscar.Location = new System.Drawing.Point(483, 398);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(113, 27);
             this.btBuscar.TabIndex = 8;
@@ -126,20 +104,28 @@ namespace proyectoFinal
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.Name = "Telefono";
             // 
+            // cbDniCli
+            // 
+            this.cbDniCli.FormattingEnabled = true;
+            this.cbDniCli.Location = new System.Drawing.Point(71, 398);
+            this.cbDniCli.Name = "cbDniCli";
+            this.cbDniCli.Size = new System.Drawing.Size(185, 21);
+            this.cbDniCli.TabIndex = 11;
+            // 
             // conCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(652, 483);
+            this.Controls.Add(this.cbDniCli);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btBuscar);
-            this.Controls.Add(this.tBdniCli);
             this.Controls.Add(this.labDNI);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "conCli";
             this.Text = "Consultar Cliente";
+            this.Load += new System.EventHandler(this.conCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,10 +133,7 @@ namespace proyectoFinal
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Button btBuscar;
-        private System.Windows.Forms.TextBox tBdniCli;
         private System.Windows.Forms.Label labDNI;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
@@ -158,5 +141,6 @@ namespace proyectoFinal
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.ComboBox cbDniCli;
     }
 }

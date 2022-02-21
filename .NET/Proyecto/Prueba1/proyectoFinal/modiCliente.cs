@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace proyectoFinal
 
         private void btInserCli_Click(object sender, EventArgs e)
         {
-            String dniAntes = tbDNI.Text;
+            String dniAntes = cbDniCli.SelectedItem.ToString();
             String dniModi = tbDniModi.Text;
             String nombreModi = tbNombre.Text;
             String apellidoModi = tbApellidos.Text;
@@ -41,6 +42,22 @@ namespace proyectoFinal
             c.putItem(dniAntes, datos);
 
             MessageBox.Show("Se ha insertado correctamente.");
+        }
+
+        private void modiCli_Load(object sender, EventArgs e)
+        {
+            String url = "http://localhost:8080/damroom/clientes";
+
+            conectar c = new conectar(url, "GET");
+            String resultado = c.getItem();
+            List<Cliente> m = JsonConvert.DeserializeObject<List<Cliente>>(resultado);
+            String Dni;
+
+            for (int i = 0; i < m.Count; i++)
+            {
+                Dni = m.ElementAt(i).Dni;
+                cbDniCli.Items.Add(Dni);
+            }
         }
     }
 }

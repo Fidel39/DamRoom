@@ -36,7 +36,6 @@ namespace proyectoFinal
             this.tbImporte = new System.Windows.Forms.TextBox();
             this.labNombre = new System.Windows.Forms.Label();
             this.tbCaracteristicas = new System.Windows.Forms.TextBox();
-            this.btSalir = new System.Windows.Forms.Button();
             this.btInserHabi = new System.Windows.Forms.Button();
             this.groupBoxCli.SuspendLayout();
             this.SuspendLayout();
@@ -104,28 +103,13 @@ namespace proyectoFinal
             this.tbCaracteristicas.Size = new System.Drawing.Size(471, 20);
             this.tbCaracteristicas.TabIndex = 5;
             // 
-            // btSalir
-            // 
-            this.btSalir.FlatAppearance.BorderSize = 0;
-            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
-            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSalir.Location = new System.Drawing.Point(569, 440);
-            this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
-            this.btSalir.TabIndex = 14;
-            this.btSalir.Text = "Salir";
-            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalir.UseVisualStyleBackColor = true;
-            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
             // btInserHabi
             // 
             this.btInserHabi.FlatAppearance.BorderSize = 0;
             this.btInserHabi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInserHabi.Image = global::proyectoFinal.Properties.Resources.___2_;
             this.btInserHabi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btInserHabi.Location = new System.Drawing.Point(462, 440);
+            this.btInserHabi.Location = new System.Drawing.Point(569, 442);
             this.btInserHabi.Name = "btInserHabi";
             this.btInserHabi.Size = new System.Drawing.Size(75, 23);
             this.btInserHabi.TabIndex = 13;
@@ -140,7 +124,6 @@ namespace proyectoFinal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
-            this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btInserHabi);
             this.Controls.Add(this.groupBoxCli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -162,6 +145,5 @@ namespace proyectoFinal
         private System.Windows.Forms.Label labNombre;
         private System.Windows.Forms.TextBox tbCaracteristicas;
         private System.Windows.Forms.Button btInserHabi;
-        private System.Windows.Forms.Button btSalir;
     }
 }

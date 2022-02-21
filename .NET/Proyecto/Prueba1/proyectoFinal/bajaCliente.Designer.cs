@@ -31,9 +31,9 @@ namespace proyectoFinal
         {
             this.labPregunta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbDniCli = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btEliminarCli = new System.Windows.Forms.Button();
+            this.cbDniCli = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,17 +55,10 @@ namespace proyectoFinal
             this.label1.TabIndex = 1;
             this.label1.Text = "DNI:";
             // 
-            // tbDniCli
-            // 
-            this.tbDniCli.Location = new System.Drawing.Point(201, 83);
-            this.tbDniCli.Name = "tbDniCli";
-            this.tbDniCli.Size = new System.Drawing.Size(214, 20);
-            this.tbDniCli.TabIndex = 2;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbDniCli);
             this.groupBox1.Controls.Add(this.labPregunta);
-            this.groupBox1.Controls.Add(this.tbDniCli);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(27, 185);
             this.groupBox1.Name = "groupBox1";
@@ -89,6 +82,15 @@ namespace proyectoFinal
             this.btEliminarCli.UseVisualStyleBackColor = true;
             this.btEliminarCli.Click += new System.EventHandler(this.btEliminarCli_Click);
             // 
+            // cbDniCli
+            // 
+            this.cbDniCli.FormattingEnabled = true;
+            this.cbDniCli.Location = new System.Drawing.Point(201, 83);
+            this.cbDniCli.Name = "cbDniCli";
+            this.cbDniCli.Size = new System.Drawing.Size(214, 21);
+            this.cbDniCli.TabIndex = 5;
+            this.cbDniCli.Text = "DNI Cliente";
+            // 
             // bajaClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,6 +102,7 @@ namespace proyectoFinal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "bajaClie";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.bajaClie_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -110,8 +113,8 @@ namespace proyectoFinal
 
         private System.Windows.Forms.Label labPregunta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbDniCli;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btEliminarCli;
+        private System.Windows.Forms.ComboBox cbDniCli;
     }
 }

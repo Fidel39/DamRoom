@@ -37,6 +37,7 @@ namespace proyectoFinal
             btConReser.Enabled = true;
             btHabi.Enabled = true;
             btCliente.Enabled = true;
+            btInicio.Enabled = true;
         }
 
         private void enblaeSubmenuCliente()
@@ -159,6 +160,14 @@ namespace proyectoFinal
             abirFormularioHijos(new modHabi());
             enableSubHabitacion();
             btModiHabi.Enabled = false;
+        }
+
+        private void btInicio_Click(object sender, EventArgs e)
+        {
+            abirFormularioHijos(new inicio());
+            enables();
+            btInicio.Enabled = true;
+            ocultarSubmenu();
         }
     }
 }

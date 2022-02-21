@@ -34,25 +34,25 @@
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.lbFechaFin = new System.Windows.Forms.Label();
             this.dtFechaIni = new System.Windows.Forms.DateTimePicker();
-            this.tbCliRe = new System.Windows.Forms.TextBox();
             this.lbDniCliRe = new System.Windows.Forms.Label();
-            this.tbHabRe = new System.Windows.Forms.TextBox();
             this.lbFechaIni = new System.Windows.Forms.Label();
             this.lbNumHab = new System.Windows.Forms.Label();
             this.btReservar = new System.Windows.Forms.Button();
+            this.cbDniCli = new System.Windows.Forms.ComboBox();
+            this.cbHabi = new System.Windows.Forms.ComboBox();
             this.gbReservas.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbReservas
             // 
+            this.gbReservas.Controls.Add(this.cbHabi);
+            this.gbReservas.Controls.Add(this.cbDniCli);
             this.gbReservas.Controls.Add(this.tbImporte);
             this.gbReservas.Controls.Add(this.lbImporte);
             this.gbReservas.Controls.Add(this.dtFechaFin);
             this.gbReservas.Controls.Add(this.lbFechaFin);
             this.gbReservas.Controls.Add(this.dtFechaIni);
-            this.gbReservas.Controls.Add(this.tbCliRe);
             this.gbReservas.Controls.Add(this.lbDniCliRe);
-            this.gbReservas.Controls.Add(this.tbHabRe);
             this.gbReservas.Controls.Add(this.lbFechaIni);
             this.gbReservas.Controls.Add(this.lbNumHab);
             this.gbReservas.Location = new System.Drawing.Point(29, 158);
@@ -64,15 +64,15 @@
             // 
             // tbImporte
             // 
-            this.tbImporte.Location = new System.Drawing.Point(444, 36);
+            this.tbImporte.Location = new System.Drawing.Point(486, 36);
             this.tbImporte.Name = "tbImporte";
-            this.tbImporte.Size = new System.Drawing.Size(151, 20);
+            this.tbImporte.Size = new System.Drawing.Size(109, 20);
             this.tbImporte.TabIndex = 10;
             // 
             // lbImporte
             // 
             this.lbImporte.AutoSize = true;
-            this.lbImporte.Location = new System.Drawing.Point(393, 39);
+            this.lbImporte.Location = new System.Drawing.Point(435, 39);
             this.lbImporte.Name = "lbImporte";
             this.lbImporte.Size = new System.Drawing.Size(45, 13);
             this.lbImporte.TabIndex = 9;
@@ -102,28 +102,14 @@
             this.dtFechaIni.TabIndex = 6;
             this.dtFechaIni.Value = new System.DateTime(2022, 2, 17, 12, 19, 24, 0);
             // 
-            // tbCliRe
-            // 
-            this.tbCliRe.Location = new System.Drawing.Point(277, 39);
-            this.tbCliRe.Name = "tbCliRe";
-            this.tbCliRe.Size = new System.Drawing.Size(83, 20);
-            this.tbCliRe.TabIndex = 5;
-            // 
             // lbDniCliRe
             // 
             this.lbDniCliRe.AutoSize = true;
-            this.lbDniCliRe.Location = new System.Drawing.Point(208, 39);
+            this.lbDniCliRe.Location = new System.Drawing.Point(205, 39);
             this.lbDniCliRe.Name = "lbDniCliRe";
             this.lbDniCliRe.Size = new System.Drawing.Size(63, 13);
             this.lbDniCliRe.TabIndex = 4;
             this.lbDniCliRe.Text = "DNI cliente:";
-            // 
-            // tbHabRe
-            // 
-            this.tbHabRe.Location = new System.Drawing.Point(96, 36);
-            this.tbHabRe.Name = "tbHabRe";
-            this.tbHabRe.Size = new System.Drawing.Size(62, 20);
-            this.tbHabRe.TabIndex = 3;
             // 
             // lbFechaIni
             // 
@@ -158,6 +144,24 @@
             this.btReservar.UseVisualStyleBackColor = true;
             this.btReservar.Click += new System.EventHandler(this.btReservar_Click);
             // 
+            // cbDniCli
+            // 
+            this.cbDniCli.FormattingEnabled = true;
+            this.cbDniCli.Location = new System.Drawing.Point(274, 36);
+            this.cbDniCli.Name = "cbDniCli";
+            this.cbDniCli.Size = new System.Drawing.Size(121, 21);
+            this.cbDniCli.TabIndex = 13;
+            this.cbDniCli.Text = "DNI";
+            // 
+            // cbHabi
+            // 
+            this.cbHabi.FormattingEnabled = true;
+            this.cbHabi.Location = new System.Drawing.Point(96, 36);
+            this.cbHabi.Name = "cbHabi";
+            this.cbHabi.Size = new System.Drawing.Size(86, 21);
+            this.cbHabi.TabIndex = 13;
+            this.cbHabi.Text = "NºHabitacion";
+            // 
             // anyReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +175,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "anyReserva";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.anyReserva_Load);
             this.gbReservas.ResumeLayout(false);
             this.gbReservas.PerformLayout();
             this.ResumeLayout(false);
@@ -185,10 +190,10 @@
         private System.Windows.Forms.DateTimePicker dtFechaFin;
         private System.Windows.Forms.Label lbFechaFin;
         private System.Windows.Forms.DateTimePicker dtFechaIni;
-        private System.Windows.Forms.TextBox tbCliRe;
         private System.Windows.Forms.Label lbDniCliRe;
-        private System.Windows.Forms.TextBox tbHabRe;
         private System.Windows.Forms.Label lbFechaIni;
         private System.Windows.Forms.Label lbNumHab;
+        private System.Windows.Forms.ComboBox cbDniCli;
+        private System.Windows.Forms.ComboBox cbHabi;
     }
 }

@@ -31,7 +31,6 @@ namespace proyectoFinal
         {
             this.groupBoxModHab = new System.Windows.Forms.GroupBox();
             this.labPregunta = new System.Windows.Forms.Label();
-            this.tbNumHabi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxHabi = new System.Windows.Forms.GroupBox();
             this.labDire = new System.Windows.Forms.Label();
@@ -41,14 +40,15 @@ namespace proyectoFinal
             this.labNombre = new System.Windows.Forms.Label();
             this.tbCaracteristicas = new System.Windows.Forms.TextBox();
             this.btModiHabi = new System.Windows.Forms.Button();
+            this.cbHabi = new System.Windows.Forms.ComboBox();
             this.groupBoxModHab.SuspendLayout();
             this.groupBoxHabi.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxModHab
             // 
+            this.groupBoxModHab.Controls.Add(this.cbHabi);
             this.groupBoxModHab.Controls.Add(this.labPregunta);
-            this.groupBoxModHab.Controls.Add(this.tbNumHabi);
             this.groupBoxModHab.Controls.Add(this.label1);
             this.groupBoxModHab.Location = new System.Drawing.Point(25, 40);
             this.groupBoxModHab.Name = "groupBoxModHab";
@@ -65,13 +65,6 @@ namespace proyectoFinal
             this.labPregunta.Size = new System.Drawing.Size(347, 13);
             this.labPregunta.TabIndex = 0;
             this.labPregunta.Text = "Que habitacion quieres modificar? Introduzca el numero de la habitacion";
-            // 
-            // tbNumHabi
-            // 
-            this.tbNumHabi.Location = new System.Drawing.Point(254, 80);
-            this.tbNumHabi.Name = "tbNumHabi";
-            this.tbNumHabi.Size = new System.Drawing.Size(180, 20);
-            this.tbNumHabi.TabIndex = 2;
             // 
             // label1
             // 
@@ -160,6 +153,15 @@ namespace proyectoFinal
             this.btModiHabi.UseVisualStyleBackColor = true;
             this.btModiHabi.Click += new System.EventHandler(this.btModiHabi_Click);
             // 
+            // cbHabi
+            // 
+            this.cbHabi.FormattingEnabled = true;
+            this.cbHabi.Location = new System.Drawing.Point(254, 80);
+            this.cbHabi.Name = "cbHabi";
+            this.cbHabi.Size = new System.Drawing.Size(180, 21);
+            this.cbHabi.TabIndex = 18;
+            this.cbHabi.Text = "Numero Habitacion";
+            // 
             // modHabi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +174,7 @@ namespace proyectoFinal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modHabi";
             this.Text = "Form11";
+            this.Load += new System.EventHandler(this.modHabi_Load);
             this.groupBoxModHab.ResumeLayout(false);
             this.groupBoxModHab.PerformLayout();
             this.groupBoxHabi.ResumeLayout(false);
@@ -184,7 +187,6 @@ namespace proyectoFinal
         private System.Windows.Forms.Button btModiHabi;
         private System.Windows.Forms.GroupBox groupBoxModHab;
         private System.Windows.Forms.Label labPregunta;
-        private System.Windows.Forms.TextBox tbNumHabi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxHabi;
         private System.Windows.Forms.Label labDire;
@@ -193,5 +195,6 @@ namespace proyectoFinal
         private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.Label labNombre;
         private System.Windows.Forms.TextBox tbCaracteristicas;
+        private System.Windows.Forms.ComboBox cbHabi;
     }
 }

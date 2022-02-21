@@ -43,8 +43,8 @@ namespace proyectoFinal
             this.btModiCli = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labPregunta = new System.Windows.Forms.Label();
-            this.tbDNI = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbDniCli = new System.Windows.Forms.ComboBox();
             this.groupBoxCli.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -165,8 +165,8 @@ namespace proyectoFinal
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbDniCli);
             this.groupBox1.Controls.Add(this.labPregunta);
-            this.groupBox1.Controls.Add(this.tbDNI);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 49);
             this.groupBox1.Name = "groupBox1";
@@ -184,13 +184,6 @@ namespace proyectoFinal
             this.labPregunta.TabIndex = 0;
             this.labPregunta.Text = "Que cliente quieres modificar? Introduzca su DNI";
             // 
-            // tbDNI
-            // 
-            this.tbDNI.Location = new System.Drawing.Point(220, 81);
-            this.tbDNI.Name = "tbDNI";
-            this.tbDNI.Size = new System.Drawing.Size(203, 20);
-            this.tbDNI.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -199,6 +192,15 @@ namespace proyectoFinal
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "DNI:";
+            // 
+            // cbDniCli
+            // 
+            this.cbDniCli.FormattingEnabled = true;
+            this.cbDniCli.Location = new System.Drawing.Point(220, 81);
+            this.cbDniCli.Name = "cbDniCli";
+            this.cbDniCli.Size = new System.Drawing.Size(203, 21);
+            this.cbDniCli.TabIndex = 3;
+            this.cbDniCli.Text = "DNI Cliente";
             // 
             // modiCli
             // 
@@ -212,6 +214,7 @@ namespace proyectoFinal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modiCli";
             this.Text = "Form8";
+            this.Load += new System.EventHandler(this.modiCli_Load);
             this.groupBoxCli.ResumeLayout(false);
             this.groupBoxCli.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -236,7 +239,7 @@ namespace proyectoFinal
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labPregunta;
-        private System.Windows.Forms.TextBox tbDNI;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbDniCli;
     }
 }

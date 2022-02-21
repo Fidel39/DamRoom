@@ -56,7 +56,6 @@ C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.altaHabi.resources
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaHabi.resources
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modHabi.resources
-C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.estadisticas.resources
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
@@ -90,7 +89,6 @@ E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFina
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.dll
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\bin\Debug\Newtonsoft.Json.xml
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.AssemblyReference.cache
-E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.estadisticas.resources
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.DamRoom.resources
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.bajaHabi.resources
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.modHabi.resources
@@ -108,3 +106,5 @@ E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFina
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.csproj.CopyComplete
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.exe
 E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.pdb
+C:\Users\dam_ftb\Desktop\ProyectoRepos\Repositorio\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.inicio.resources
+E:\Proyecto Final\Repositorio\DamRoom\DamRoom\.NET\Proyecto\Prueba1\proyectoFinal\obj\Debug\proyectoFinal.inicio.resources

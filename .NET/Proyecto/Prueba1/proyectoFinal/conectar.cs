@@ -142,5 +142,21 @@ namespace proyectoFinal
             }
             catch (WebException e) { }
         }
+
+        public void putItemVacio(long id)
+        {
+            try
+            {
+                WebResponse response = request.GetResponse();
+                Stream strReader = response.GetResponseStream();
+
+                if (strReader == null) return;
+
+                StreamReader sr = new StreamReader(strReader);
+                String respuesta = sr.ReadToEnd();
+
+            }
+            catch (WebException e) { }
+        }
     }
 }

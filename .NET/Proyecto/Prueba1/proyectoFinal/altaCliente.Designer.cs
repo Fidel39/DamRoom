@@ -41,7 +41,6 @@ namespace proyectoFinal
             this.labDire = new System.Windows.Forms.Label();
             this.btInserCli = new System.Windows.Forms.Button();
             this.groupBoxCli = new System.Windows.Forms.GroupBox();
-            this.btSalir = new System.Windows.Forms.Button();
             this.groupBoxCli.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +130,7 @@ namespace proyectoFinal
             this.btInserCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInserCli.Image = global::proyectoFinal.Properties.Resources.___2_;
             this.btInserCli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btInserCli.Location = new System.Drawing.Point(469, 445);
+            this.btInserCli.Location = new System.Drawing.Point(568, 445);
             this.btInserCli.Name = "btInserCli";
             this.btInserCli.Size = new System.Drawing.Size(75, 23);
             this.btInserCli.TabIndex = 10;
@@ -159,28 +158,12 @@ namespace proyectoFinal
             this.groupBoxCli.TabStop = false;
             this.groupBoxCli.Text = "Insertar Cliente";
             // 
-            // btSalir
-            // 
-            this.btSalir.FlatAppearance.BorderSize = 0;
-            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSalir.Image = global::proyectoFinal.Properties.Resources.X;
-            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSalir.Location = new System.Drawing.Point(568, 445);
-            this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
-            this.btSalir.TabIndex = 12;
-            this.btSalir.Text = "Salir";
-            this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalir.UseVisualStyleBackColor = true;
-            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
             // altaCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
-            this.Controls.Add(this.btSalir);
             this.Controls.Add(this.groupBoxCli);
             this.Controls.Add(this.btInserCli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -206,6 +189,5 @@ namespace proyectoFinal
         private System.Windows.Forms.Label labDire;
         private System.Windows.Forms.Button btInserCli;
         private System.Windows.Forms.GroupBox groupBoxCli;
-        private System.Windows.Forms.Button btSalir;
     }
 }

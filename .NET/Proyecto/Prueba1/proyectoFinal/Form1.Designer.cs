@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.btInicio = new System.Windows.Forms.Button();
             this.panelSubHabi = new System.Windows.Forms.Panel();
             this.btModiHabi = new System.Windows.Forms.Button();
             this.btBajaHabi = new System.Windows.Forms.Button();
@@ -45,24 +46,23 @@
             this.btConReser = new System.Windows.Forms.Button();
             this.btAnyReser = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btEstadisticas = new System.Windows.Forms.Button();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubHabi.SuspendLayout();
             this.panelSubCliente.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelMenuLateral.Controls.Add(this.btEstadisticas);
+            this.panelMenuLateral.Controls.Add(this.btInicio);
             this.panelMenuLateral.Controls.Add(this.panelSubHabi);
             this.panelMenuLateral.Controls.Add(this.btHabi);
             this.panelMenuLateral.Controls.Add(this.panelSubCliente);
@@ -76,6 +76,21 @@
             this.panelMenuLateral.Name = "panelMenuLateral";
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 561);
             this.panelMenuLateral.TabIndex = 0;
+            // 
+            // btInicio
+            // 
+            this.btInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btInicio.FlatAppearance.BorderSize = 0;
+            this.btInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInicio.Location = new System.Drawing.Point(0, 641);
+            this.btInicio.Name = "btInicio";
+            this.btInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btInicio.Size = new System.Drawing.Size(233, 45);
+            this.btInicio.TabIndex = 10;
+            this.btInicio.Text = "Inicio";
+            this.btInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInicio.UseVisualStyleBackColor = true;
+            this.btInicio.Click += new System.EventHandler(this.btInicio_Click);
             // 
             // panelSubHabi
             // 
@@ -316,6 +331,16 @@
             this.panelLogo.Size = new System.Drawing.Size(233, 139);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::proyectoFinal.Properties.Resources.logoPequeño;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
@@ -335,30 +360,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::proyectoFinal.Properties.Resources.logoPequeño;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btEstadisticas
-            // 
-            this.btEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btEstadisticas.FlatAppearance.BorderSize = 0;
-            this.btEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEstadisticas.Location = new System.Drawing.Point(0, 641);
-            this.btEstadisticas.Name = "btEstadisticas";
-            this.btEstadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btEstadisticas.Size = new System.Drawing.Size(233, 45);
-            this.btEstadisticas.TabIndex = 10;
-            this.btEstadisticas.Text = "Estadisticas";
-            this.btEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEstadisticas.UseVisualStyleBackColor = true;
-            // 
             // DamRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,9 +376,9 @@
             this.panelSubHabi.ResumeLayout(false);
             this.panelSubCliente.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,7 +405,7 @@
         private System.Windows.Forms.Button btModiHabi;
         private System.Windows.Forms.Button btBajaHabi;
         private System.Windows.Forms.Button btAltaHabi;
-        private System.Windows.Forms.Button btEstadisticas;
+        private System.Windows.Forms.Button btInicio;
     }
 }
 

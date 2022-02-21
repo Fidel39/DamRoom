@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,35 +19,36 @@ namespace proyectoFinal
             InitializeComponent();
         }
 
-        private void btAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btDniCli_Click(object sender, EventArgs e)
         {
             enable();
-            tbDNICli.Enabled = true;
+            cbDniCli.Enabled = true;
         }
 
         private void conReservas_Load(object sender, EventArgs e)
         {
             enable();
+
+            String url = "http://localhost:8080/damroom/clientes";
+
+            conectar c = new conectar(url, "GET");
+            String resultado = c.getItem();
+            List<Cliente> m = JsonConvert.DeserializeObject<List<Cliente>>(resultado);
+            String Dni;
+
+            for (int i = 0; i < m.Count; i++)
+            {
+                Dni = m.ElementAt(i).Dni;
+                cbDniCli.Items.Add(Dni);
+            }
         }
 
         private void enable()
         {
-            tbDNICli.Enabled = false;
-            tbHabi.Enabled = false;
+            cbDniCli.Enabled = false;
             tbImporte.Enabled = false;
             dtFechaFin.Enabled = false;
             dtFechaIni.Enabled = false;
-        }
-
-        private void btHabi_Click(object sender, EventArgs e)
-        {
-            enable();
-            tbHabi.Enabled = true;
         }
 
         private void btFechaIni_Click(object sender, EventArgs e)
@@ -69,16 +71,10 @@ namespace proyectoFinal
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            if(tbDNICli.Enabled)
+            if(cbDniCli.Enabled)
             {
-                String dni = tbDNICli.Text;
+                String dni = cbDniCli.SelectedItem.ToString();
                 String url = "http://localhost:8080/damroom/reservas/" + dni;
-                metodoConsultar(url);
-            }
-            else if (tbHabi.Enabled)
-            {
-                int habitacion = int.Parse(tbHabi.Text);
-                String url = "http://localhost:8080/damroom/reservas/" + habitacion;
                 metodoConsultar(url);
             }
             else if (dtFechaIni.Enabled)
@@ -105,12 +101,27 @@ namespace proyectoFinal
         {
             conectar c = new conectar(url, "GET");
             String resultado = c.getItem();
+            List<Reserva> m = JsonConvert.DeserializeObject<List<Reserva>>(resultado);
+            long idReserva;
+            DateTime fi, ff;
+            float importe;
+            String dniCli;
+            long numHabi;
+            string estado;
 
+            for(int i = 0; i < m.Count; i++)
+            {
+                idReserva = m.ElementAt(i).IdReserva;
+                dniCli = m.ElementAt(i).DniCliente;
+                estado = m.ElementAt(i).Estado;
+                ff = m.ElementAt(i).FechaFin;
+                fi = m.ElementAt(i).FechaIni;
+                importe = m.ElementAt(i).Importe;
+                numHabi = m.ElementAt(i).NumHabi;
 
-        }
+                dgReserva.Rows.Add(idReserva, dniCli, estado, ff, fi, importe, numHabi);
+            }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

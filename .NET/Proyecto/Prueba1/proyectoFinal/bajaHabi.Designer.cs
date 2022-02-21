@@ -31,16 +31,16 @@ namespace proyectoFinal
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labPregunta = new System.Windows.Forms.Label();
-            this.tbNumHabi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btBajaHabi = new System.Windows.Forms.Button();
+            this.cbHabi = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbHabi);
             this.groupBox1.Controls.Add(this.labPregunta);
-            this.groupBox1.Controls.Add(this.tbNumHabi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(27, 196);
             this.groupBox1.Name = "groupBox1";
@@ -57,13 +57,6 @@ namespace proyectoFinal
             this.labPregunta.Size = new System.Drawing.Size(358, 13);
             this.labPregunta.TabIndex = 0;
             this.labPregunta.Text = "Que habitacion quieres dar de baja? Introduzca el numero de la habitacion";
-            // 
-            // tbNumHabi
-            // 
-            this.tbNumHabi.Location = new System.Drawing.Point(254, 80);
-            this.tbNumHabi.Name = "tbNumHabi";
-            this.tbNumHabi.Size = new System.Drawing.Size(180, 20);
-            this.tbNumHabi.TabIndex = 2;
             // 
             // label1
             // 
@@ -87,6 +80,16 @@ namespace proyectoFinal
             this.btBajaHabi.Text = "Eliminar";
             this.btBajaHabi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBajaHabi.UseVisualStyleBackColor = true;
+            this.btBajaHabi.Click += new System.EventHandler(this.btBajaHabi_Click_1);
+            // 
+            // cbHabi
+            // 
+            this.cbHabi.FormattingEnabled = true;
+            this.cbHabi.Location = new System.Drawing.Point(254, 80);
+            this.cbHabi.Name = "cbHabi";
+            this.cbHabi.Size = new System.Drawing.Size(180, 21);
+            this.cbHabi.TabIndex = 6;
+            this.cbHabi.Text = "Numero Habitacion";
             // 
             // bajaHabi
             // 
@@ -99,6 +102,7 @@ namespace proyectoFinal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "bajaHabi";
             this.Text = "Form10";
+            this.Load += new System.EventHandler(this.bajaHabi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -109,8 +113,8 @@ namespace proyectoFinal
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labPregunta;
-        private System.Windows.Forms.TextBox tbNumHabi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btBajaHabi;
+        private System.Windows.Forms.ComboBox cbHabi;
     }
 }

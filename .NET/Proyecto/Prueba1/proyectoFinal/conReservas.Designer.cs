@@ -28,44 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btAtras = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtFechaIni = new System.Windows.Forms.DateTimePicker();
             this.tbImporte = new System.Windows.Forms.TextBox();
-            this.tbHabi = new System.Windows.Forms.TextBox();
-            this.tbDNICli = new System.Windows.Forms.TextBox();
             this.btDniCli = new System.Windows.Forms.Button();
-            this.btHabi = new System.Windows.Forms.Button();
             this.btFechaIni = new System.Windows.Forms.Button();
             this.btFechaFin = new System.Windows.Forms.Button();
             this.btImporte = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_reservas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgReserva = new System.Windows.Forms.DataGridView();
+            this.idReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dni_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cliente_dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbDniCli = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReserva)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btAtras
-            // 
-            this.btAtras.FlatAppearance.BorderSize = 0;
-            this.btAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAtras.Image = global::proyectoFinal.Properties.Resources.X;
-            this.btAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btAtras.Location = new System.Drawing.Point(239, 393);
-            this.btAtras.Name = "btAtras";
-            this.btAtras.Size = new System.Drawing.Size(75, 23);
-            this.btAtras.TabIndex = 33;
-            this.btAtras.Text = "Atras";
-            this.btAtras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAtras.UseVisualStyleBackColor = true;
-            this.btAtras.Click += new System.EventHandler(this.btAtras_Click);
             // 
             // btBuscar
             // 
@@ -73,7 +54,7 @@
             this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBuscar.Image = global::proyectoFinal.Properties.Resources.lupa1;
             this.btBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btBuscar.Location = new System.Drawing.Point(20, 393);
+            this.btBuscar.Location = new System.Drawing.Point(239, 393);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
             this.btBuscar.TabIndex = 32;
@@ -84,38 +65,24 @@
             // 
             // dtFechaFin
             // 
-            this.dtFechaFin.Location = new System.Drawing.Point(114, 185);
+            this.dtFechaFin.Location = new System.Drawing.Point(114, 149);
             this.dtFechaFin.Name = "dtFechaFin";
             this.dtFechaFin.Size = new System.Drawing.Size(200, 20);
             this.dtFechaFin.TabIndex = 27;
             // 
             // dtFechaIni
             // 
-            this.dtFechaIni.Location = new System.Drawing.Point(114, 140);
+            this.dtFechaIni.Location = new System.Drawing.Point(114, 99);
             this.dtFechaIni.Name = "dtFechaIni";
             this.dtFechaIni.Size = new System.Drawing.Size(200, 20);
             this.dtFechaIni.TabIndex = 26;
             // 
             // tbImporte
             // 
-            this.tbImporte.Location = new System.Drawing.Point(114, 231);
+            this.tbImporte.Location = new System.Drawing.Point(114, 207);
             this.tbImporte.Name = "tbImporte";
             this.tbImporte.Size = new System.Drawing.Size(200, 20);
             this.tbImporte.TabIndex = 24;
-            // 
-            // tbHabi
-            // 
-            this.tbHabi.Location = new System.Drawing.Point(114, 94);
-            this.tbHabi.Name = "tbHabi";
-            this.tbHabi.Size = new System.Drawing.Size(200, 20);
-            this.tbHabi.TabIndex = 20;
-            // 
-            // tbDNICli
-            // 
-            this.tbDNICli.Location = new System.Drawing.Point(114, 51);
-            this.tbDNICli.Name = "tbDNICli";
-            this.tbDNICli.Size = new System.Drawing.Size(200, 20);
-            this.tbDNICli.TabIndex = 18;
             // 
             // btDniCli
             // 
@@ -127,19 +94,9 @@
             this.btDniCli.UseVisualStyleBackColor = true;
             this.btDniCli.Click += new System.EventHandler(this.btDniCli_Click);
             // 
-            // btHabi
-            // 
-            this.btHabi.Location = new System.Drawing.Point(20, 94);
-            this.btHabi.Name = "btHabi";
-            this.btHabi.Size = new System.Drawing.Size(75, 23);
-            this.btHabi.TabIndex = 35;
-            this.btHabi.Text = "Habitacion:";
-            this.btHabi.UseVisualStyleBackColor = true;
-            this.btHabi.Click += new System.EventHandler(this.btHabi_Click);
-            // 
             // btFechaIni
             // 
-            this.btFechaIni.Location = new System.Drawing.Point(20, 140);
+            this.btFechaIni.Location = new System.Drawing.Point(20, 96);
             this.btFechaIni.Name = "btFechaIni";
             this.btFechaIni.Size = new System.Drawing.Size(75, 23);
             this.btFechaIni.TabIndex = 36;
@@ -149,7 +106,7 @@
             // 
             // btFechaFin
             // 
-            this.btFechaFin.Location = new System.Drawing.Point(20, 182);
+            this.btFechaFin.Location = new System.Drawing.Point(20, 146);
             this.btFechaFin.Name = "btFechaFin";
             this.btFechaFin.Size = new System.Drawing.Size(75, 23);
             this.btFechaFin.TabIndex = 37;
@@ -159,7 +116,7 @@
             // 
             // btImporte
             // 
-            this.btImporte.Location = new System.Drawing.Point(20, 227);
+            this.btImporte.Location = new System.Drawing.Point(20, 204);
             this.btImporte.Name = "btImporte";
             this.btImporte.Size = new System.Drawing.Size(75, 23);
             this.btImporte.TabIndex = 38;
@@ -167,63 +124,65 @@
             this.btImporte.UseVisualStyleBackColor = true;
             this.btImporte.Click += new System.EventHandler(this.btImporte_Click);
             // 
-            // dataGridView1
+            // dgReserva
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_reservas,
+            this.dgReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgReserva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idReserva,
             this.dni_cliente,
             this.estado,
-            this.fecha_ini,
             this.fecha_fin,
+            this.fecha_ini,
             this.importe,
-            this.cliente_dni,
             this.habitacion});
-            this.dataGridView1.Location = new System.Drawing.Point(330, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(317, 365);
-            this.dataGridView1.TabIndex = 39;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgReserva.Location = new System.Drawing.Point(346, 51);
+            this.dgReserva.Name = "dgReserva";
+            this.dgReserva.Size = new System.Drawing.Size(293, 365);
+            this.dgReserva.TabIndex = 40;
             // 
-            // id_reservas
+            // idReserva
             // 
-            this.id_reservas.HeaderText = "IDReservas";
-            this.id_reservas.Name = "id_reservas";
+            this.idReserva.HeaderText = "idReserva";
+            this.idReserva.Name = "idReserva";
             // 
             // dni_cliente
             // 
-            this.dni_cliente.HeaderText = "DNICliente";
+            this.dni_cliente.HeaderText = "DNI";
             this.dni_cliente.Name = "dni_cliente";
             // 
             // estado
             // 
-            this.estado.HeaderText = "Estado";
+            this.estado.HeaderText = "estado";
             this.estado.Name = "estado";
-            // 
-            // fecha_ini
-            // 
-            this.fecha_ini.HeaderText = "FechaInicial";
-            this.fecha_ini.Name = "fecha_ini";
             // 
             // fecha_fin
             // 
-            this.fecha_fin.HeaderText = "FechaFin";
+            this.fecha_fin.HeaderText = "fechaFin";
             this.fecha_fin.Name = "fecha_fin";
+            // 
+            // fecha_ini
+            // 
+            this.fecha_ini.HeaderText = "fecha_ini";
+            this.fecha_ini.Name = "fecha_ini";
             // 
             // importe
             // 
-            this.importe.HeaderText = "Importe";
+            this.importe.HeaderText = "importe";
             this.importe.Name = "importe";
-            // 
-            // cliente_dni
-            // 
-            this.cliente_dni.HeaderText = "Cliente";
-            this.cliente_dni.Name = "cliente_dni";
             // 
             // habitacion
             // 
-            this.habitacion.HeaderText = "Habitacion";
+            this.habitacion.HeaderText = "habitacion";
             this.habitacion.Name = "habitacion";
+            // 
+            // cbDniCli
+            // 
+            this.cbDniCli.FormattingEnabled = true;
+            this.cbDniCli.Location = new System.Drawing.Point(114, 49);
+            this.cbDniCli.Name = "cbDniCli";
+            this.cbDniCli.Size = new System.Drawing.Size(200, 21);
+            this.cbDniCli.TabIndex = 41;
+            this.cbDniCli.Text = "DNI Cliente";
             // 
             // conReservas
             // 
@@ -231,51 +190,43 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 522);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbDniCli);
+            this.Controls.Add(this.dgReserva);
             this.Controls.Add(this.btImporte);
             this.Controls.Add(this.btFechaFin);
             this.Controls.Add(this.btFechaIni);
-            this.Controls.Add(this.btHabi);
             this.Controls.Add(this.btDniCli);
-            this.Controls.Add(this.btAtras);
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.dtFechaFin);
             this.Controls.Add(this.dtFechaIni);
             this.Controls.Add(this.tbImporte);
-            this.Controls.Add(this.tbHabi);
-            this.Controls.Add(this.tbDNICli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "conReservas";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.conReservas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReserva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btAtras;
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.DateTimePicker dtFechaFin;
         private System.Windows.Forms.DateTimePicker dtFechaIni;
         private System.Windows.Forms.TextBox tbImporte;
-        private System.Windows.Forms.TextBox tbHabi;
-        private System.Windows.Forms.TextBox tbDNICli;
         private System.Windows.Forms.Button btDniCli;
-        private System.Windows.Forms.Button btHabi;
         private System.Windows.Forms.Button btFechaIni;
         private System.Windows.Forms.Button btFechaFin;
         private System.Windows.Forms.Button btImporte;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_reservas;
+        private System.Windows.Forms.DataGridView dgReserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn dni_cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ini;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_fin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ini;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cliente_dni;
         private System.Windows.Forms.DataGridViewTextBoxColumn habitacion;
+        private System.Windows.Forms.ComboBox cbDniCli;
     }
 }
